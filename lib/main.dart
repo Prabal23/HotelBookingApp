@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:roome/StartingPage/startingPage.dart';
+
+import 'MainScreens/StartingPage/startingPage.dart';
 
 void main() => runApp(MyApp());
 
