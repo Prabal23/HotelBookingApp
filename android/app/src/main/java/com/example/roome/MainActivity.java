@@ -1,4 +1,4 @@
-package com.example.roome;
+package com.hotel.booking;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
