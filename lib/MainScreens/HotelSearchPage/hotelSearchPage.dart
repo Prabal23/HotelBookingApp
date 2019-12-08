@@ -1,4 +1,3 @@
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
@@ -734,17 +733,14 @@ class HotelSearchPageState extends State<HotelSearchPage> {
                               ],
                             )),
                         Container(
-                          //color: Colors.red,
                           margin: EdgeInsets.only(top: 15),
                           width: MediaQuery.of(context).size.width,
-                          //padding: EdgeInsets.only(left: 0),
                           height: 230,
                           child: Container(
                             child: MediaQuery.removePadding(
                               context: context,
                               removeTop: true,
                               child: new ListView.builder(
-                                //scrollDirection: Axis.horizontal,
                                 itemBuilder:
                                     (BuildContext context, int index) =>
                                         HomeBestDealsCard(),

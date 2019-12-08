@@ -20,7 +20,6 @@ class _UsedCouponCardState extends State<UsedCouponCard> {
             BoxShadow(
               blurRadius: 3.0,
               color: Colors.black.withOpacity(.2),
-              //offset: Offset(6.0, 7.0),
             ),
           ],
         ),
@@ -34,7 +33,6 @@ class _UsedCouponCardState extends State<UsedCouponCard> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Container(
-                    //width: MediaQuery.of(context).size.width,
                     margin: EdgeInsets.only(top: 0, bottom: 10, right: 10),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -133,7 +131,6 @@ class _UsedCouponCardState extends State<UsedCouponCard> {
                               ),
                             ),
                             Container(
-                                //width: 100,
                                 padding: EdgeInsets.all(7),
                                 margin:
                                     EdgeInsets.only(left: 0, right: 0, top: 10),
@@ -153,18 +150,6 @@ class _UsedCouponCardState extends State<UsedCouponCard> {
                                             fontFamily: 'Oswald'),
                                         textAlign: TextAlign.center,
                                       ),
-                                      // Container(
-                                      //     margin: EdgeInsets
-                                      //         .only(
-                                      //             top:
-                                      //                 4, left: 3),
-                                      //     child: Icon(
-                                      //       Icons
-                                      //           .arrow_forward,
-                                      //       color:
-                                      //           header,
-                                      //       size: 13,
-                                      //     ))
                                     ],
                                   ),
                                 )),

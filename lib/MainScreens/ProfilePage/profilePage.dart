@@ -1,4 +1,3 @@
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:roome/MainScreens/ChangePassPage/changePassPage.dart';
@@ -31,27 +30,28 @@ class ProfilePageState extends State<ProfilePage> {
             child: Container(
               child: new Column(
                 children: <Widget>[
-                  Container(
-                    margin: EdgeInsets.only(top: 30, left: 25, right: 25),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Expanded(
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ProfileEditPage()),
-                              );
-                            },
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => ProfileEditPage()),
+                      );
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(top: 30, left: 25, right: 25),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Expanded(
                             child: Container(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: <Widget>[
                                   Container(
                                       alignment: Alignment.centerLeft,
-                                      margin: EdgeInsets.only(top: 0, left: 0),
+                                      margin:
+                                          EdgeInsets.only(top: 0, left: 0),
                                       child: Text(
                                         "John Smith",
                                         textAlign: TextAlign.start,
@@ -62,7 +62,8 @@ class ProfilePageState extends State<ProfilePage> {
                                       )),
                                   Container(
                                       alignment: Alignment.centerLeft,
-                                      margin: EdgeInsets.only(top: 0, left: 0),
+                                      margin:
+                                          EdgeInsets.only(top: 0, left: 0),
                                       child: Row(
                                         children: <Widget>[
                                           Text(
@@ -85,45 +86,34 @@ class ProfilePageState extends State<ProfilePage> {
                                           )
                                         ],
                                       )),
-                                  // Text(
-                                  //   "Enjoying 40% discount",
-                                  //   textAlign: TextAlign.start,
-                                  //   style: TextStyle(
-                                  //       color: header,
-                                  //       fontSize: 11,
-                                  //       fontFamily: 'Oswald',
-                                  //       fontWeight: FontWeight.bold),
-                                  // ),
                                 ],
                               ),
                             ),
                           ),
-                        ),
-                        Center(
-                          child: Container(
-                            margin: EdgeInsets.only(right: 0, top: 0),
-                            //transform: Matrix4.translationValues(0.0, 0.0, 0.0),
-                            padding: EdgeInsets.all(1.0),
-                            child: CircleAvatar(
-                              radius: 40.0,
-                              backgroundColor: Colors.white,
-                              backgroundImage:
-                                  AssetImage('assets/images/man.png'),
-                            ),
-                            decoration: new BoxDecoration(
-                              color: Colors.grey[200], // border color
-                              shape: BoxShape.circle,
-                              boxShadow: [
-                                BoxShadow(
-                                  blurRadius: 3.0,
-                                  color: Colors.black.withOpacity(.2),
-                                  //offset: Offset(6.0, 7.0),
-                                ),
-                              ],
+                          Center(
+                            child: Container(
+                              margin: EdgeInsets.only(right: 0, top: 0),
+                              padding: EdgeInsets.all(1.0),
+                              child: CircleAvatar(
+                                radius: 40.0,
+                                backgroundColor: Colors.white,
+                                backgroundImage:
+                                    AssetImage('assets/images/man.png'),
+                              ),
+                              decoration: new BoxDecoration(
+                                color: Colors.grey[200], // border color
+                                shape: BoxShape.circle,
+                                boxShadow: [
+                                  BoxShadow(
+                                    blurRadius: 3.0,
+                                    color: Colors.black.withOpacity(.2),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                   GestureDetector(
@@ -164,7 +154,6 @@ class ProfilePageState extends State<ProfilePage> {
                             BoxShadow(
                               blurRadius: 3.0,
                               color: Colors.black38,
-                              //offset: Offset(6.0, 7.0),
                             ),
                           ],
                           border:
@@ -248,12 +237,10 @@ class ProfilePageState extends State<ProfilePage> {
                                 Container(
                                   margin: EdgeInsets.only(
                                       left: 0, right: 5, top: 3),
-                                  //transform: Matrix4.translationValues(0.0, 0.0, 0.0),
                                   padding: EdgeInsets.all(1.0),
                                   child: CircleAvatar(
                                     radius: 1.0,
                                     backgroundColor: header,
-                                    //backgroundImage: AssetImage('assets/user.png'),
                                   ),
                                   decoration: new BoxDecoration(
                                     color: header, // border color
@@ -306,7 +293,6 @@ class ProfilePageState extends State<ProfilePage> {
                             BoxShadow(
                               blurRadius: 3.0,
                               color: Colors.black38,
-                              //offset: Offset(6.0, 7.0),
                             ),
                           ],
                           border:
@@ -370,7 +356,6 @@ class ProfilePageState extends State<ProfilePage> {
                             BoxShadow(
                               blurRadius: 3.0,
                               color: Colors.black38,
-                              //offset: Offset(6.0, 7.0),
                             ),
                           ],
                           border:
@@ -413,7 +398,6 @@ class ProfilePageState extends State<ProfilePage> {
                             BoxShadow(
                               blurRadius: 3.0,
                               color: Colors.black38,
-                              //offset: Offset(6.0, 7.0),
                             ),
                           ],
                           border:
@@ -455,7 +439,6 @@ class ProfilePageState extends State<ProfilePage> {
                             BoxShadow(
                               blurRadius: 3.0,
                               color: Colors.black38,
-                              //offset: Offset(6.0, 7.0),
                             ),
                           ],
                           border:
@@ -497,7 +480,6 @@ class ProfilePageState extends State<ProfilePage> {
                             BoxShadow(
                               blurRadius: 3.0,
                               color: Colors.black38,
-                              //offset: Offset(6.0, 7.0),
                             ),
                           ],
                           border:
@@ -532,7 +514,6 @@ class ProfilePageState extends State<ProfilePage> {
                             BoxShadow(
                               blurRadius: 3.0,
                               color: Colors.black38,
-                              //offset: Offset(6.0, 7.0),
                             ),
                           ],
                           border:

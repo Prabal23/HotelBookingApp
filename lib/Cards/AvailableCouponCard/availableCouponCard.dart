@@ -30,49 +30,11 @@ class _AvailableCouponCardState extends State<AvailableCouponCard> {
               BoxShadow(
                 blurRadius: 3.0,
                 color: Colors.black.withOpacity(.2),
-                //offset: Offset(6.0, 7.0),
               ),
             ],
           ),
           child: Column(
             children: <Widget>[
-              // new Container(
-              //   padding: EdgeInsets.only(left: 0),
-              //   height: 160,
-              //   width: MediaQuery.of(context).size.width,
-              //   decoration: BoxDecoration(
-              //     image: DecorationImage(
-              //       image: index == 0
-              //           ? AssetImage(
-              //               "assets/images/h1.jpg")
-              //           : AssetImage(
-              //               "assets/images/h4.jpg"),
-              //       fit: BoxFit.cover,
-              //     ),
-              //     borderRadius: BorderRadius.only(
-              //         topLeft: Radius.circular(15.0),
-              //         topRight: Radius.circular(15.0)),
-              //     // border: Border.all(width: 0.2, color: Colors.grey)
-              //   ),
-              //   child: Stack(
-              //     children: <Widget>[
-              //       Container(
-              //           height: 160,
-              //           width: MediaQuery.of(context)
-              //               .size
-              //               .width,
-              //           decoration: BoxDecoration(
-              //             color: Colors.black
-              //                 .withOpacity(0.15),
-              //             borderRadius: BorderRadius.only(
-              //                 topLeft:
-              //                     Radius.circular(15.0),
-              //                 topRight:
-              //                     Radius.circular(15.0)),
-              //           )),
-              //     ],
-              //   ),
-              // ),
               Container(
                 width: MediaQuery.of(context).size.width,
                 margin: EdgeInsets.only(left: 10),
@@ -81,7 +43,6 @@ class _AvailableCouponCardState extends State<AvailableCouponCard> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Container(
-                      //width: MediaQuery.of(context).size.width,
                       margin: EdgeInsets.only(top: 0, bottom: 10, right: 10),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -184,7 +145,6 @@ class _AvailableCouponCardState extends State<AvailableCouponCard> {
                                 ),
                               ),
                               Container(
-                                  //width: 100,
                                   padding: EdgeInsets.all(7),
                                   margin: EdgeInsets.only(
                                       left: 0, right: 0, top: 10),
@@ -204,18 +164,6 @@ class _AvailableCouponCardState extends State<AvailableCouponCard> {
                                               fontFamily: 'Oswald'),
                                           textAlign: TextAlign.center,
                                         ),
-                                        // Container(
-                                        //     margin: EdgeInsets
-                                        //         .only(
-                                        //             top:
-                                        //                 4, left: 3),
-                                        //     child: Icon(
-                                        //       Icons
-                                        //           .arrow_forward,
-                                        //       color:
-                                        //           header,
-                                        //       size: 13,
-                                        //     ))
                                       ],
                                     ),
                                   )),

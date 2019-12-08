@@ -97,25 +97,30 @@ class StartingPageState extends State<StartingPage> {
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     fontSize: 12, color: Colors.black38))),
-                        Container(
-                          margin: EdgeInsets.only(top: 5),
-                          padding: EdgeInsets.all(10),
-                          decoration: BoxDecoration(
-                              color: header,
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Icon(
-                                Icons.refresh,
-                                size: 15,
-                                color: Colors.white,
-                              ),
-                              Text(
-                                "Retry",
-                                style: TextStyle(color: Colors.white),
-                              ),
-                            ],
+                        GestureDetector(
+                          onTap: (){
+                            internetCheck();
+                          },
+                          child: Container(
+                            margin: EdgeInsets.only(top: 5),
+                            padding: EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                                color: header,
+                                borderRadius: BorderRadius.circular(10)),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Icon(
+                                  Icons.refresh,
+                                  size: 15,
+                                  color: Colors.white,
+                                ),
+                                Text(
+                                  "Retry",
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ],
+                            ),
                           ),
                         )
                       ],

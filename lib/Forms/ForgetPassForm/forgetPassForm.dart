@@ -39,10 +39,8 @@ class _ForgetPassFormState extends State<ForgetPassForm> {
                       BoxShadow(
                         blurRadius: 3.0,
                         color: Colors.black.withOpacity(.2),
-                        //offset: Offset(6.0, 7.0),
                       ),
                     ],
-                    //border: Border.all(color: Colors.grey, width: 0.3),
                     borderRadius: BorderRadius.all(Radius.circular(100)),
                   ),
                   child: Row(
@@ -56,7 +54,6 @@ class _ForgetPassFormState extends State<ForgetPassForm> {
                           )),
                       Flexible(
                         child: TextField(
-                          //controller: phoneController,
                           keyboardType: TextInputType.emailAddress,
                           style: TextStyle(
                             color: Colors.black87,
@@ -69,7 +66,6 @@ class _ForgetPassFormState extends State<ForgetPassForm> {
                                 fontSize: 15,
                                 fontFamily: 'Oswald',
                                 fontWeight: FontWeight.w300),
-                            //labelStyle: TextStyle(color: Colors.white70),
                             contentPadding:
                                 EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
                             border: InputBorder.none,
@@ -85,23 +81,6 @@ class _ForgetPassFormState extends State<ForgetPassForm> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    // Container(
-                    //     width: 50,
-                    //     margin: EdgeInsets.only(
-                    //         top: 5, left: 25, right: 15),
-                    //     decoration: BoxDecoration(
-                    //         borderRadius: BorderRadius.all(
-                    //             Radius.circular(15.0)),
-                    //         color: Colors.white,
-                    //         boxShadow: [
-                    //           BoxShadow(
-                    //             blurRadius: 3.0,
-                    //             color: Colors.black38,
-                    //             //offset: Offset(6.0, 7.0),
-                    //           ),
-                    //         ],
-                    //         border: Border.all(
-                    //             width: 0.15, color: Colors.black38))),
                     Text(
                       "or",
                       textAlign: TextAlign.center,
@@ -111,23 +90,6 @@ class _ForgetPassFormState extends State<ForgetPassForm> {
                           fontFamily: 'Oswald',
                           fontWeight: FontWeight.w300),
                     ),
-                    // Container(
-                    //     width: 50,
-                    //     margin: EdgeInsets.only(
-                    //         top: 5, left: 15, right: 25),
-                    //     decoration: BoxDecoration(
-                    //         borderRadius: BorderRadius.all(
-                    //             Radius.circular(15.0)),
-                    //         color: Colors.white,
-                    //         boxShadow: [
-                    //           BoxShadow(
-                    //             blurRadius: 3.0,
-                    //             color: Colors.black38,
-                    //             //offset: Offset(6.0, 7.0),
-                    //           ),
-                    //         ],
-                    //         border: Border.all(
-                    //             width: 0.15, color: Colors.black38))),
                   ],
                 )),
             Container(
@@ -142,10 +104,8 @@ class _ForgetPassFormState extends State<ForgetPassForm> {
                       BoxShadow(
                         blurRadius: 3.0,
                         color: Colors.black.withOpacity(.2),
-                        //offset: Offset(6.0, 7.0),
                       ),
                     ],
-                    //border: Border.all(color: Colors.grey, width: 0.3),
                     borderRadius: BorderRadius.all(Radius.circular(100)),
                   ),
                   child: Row(
@@ -159,7 +119,6 @@ class _ForgetPassFormState extends State<ForgetPassForm> {
                           )),
                       Flexible(
                         child: TextField(
-                          //controller: phoneController,
                           keyboardType: TextInputType.emailAddress,
                           style: TextStyle(
                             color: Colors.black87,
@@ -172,7 +131,6 @@ class _ForgetPassFormState extends State<ForgetPassForm> {
                                 fontSize: 15,
                                 fontFamily: 'Oswald',
                                 fontWeight: FontWeight.w300),
-                            //labelStyle: TextStyle(color: Colors.white70),
                             contentPadding:
                                 EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
                             border: InputBorder.none,

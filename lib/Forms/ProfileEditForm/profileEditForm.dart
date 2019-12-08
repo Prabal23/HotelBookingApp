@@ -368,7 +368,6 @@ class _ProfileEditFormState extends State<ProfileEditForm> {
                                           fontSize: 14,
                                           fontFamily: 'Oswald',
                                           fontWeight: FontWeight.w300),
-                                      //labelStyle: TextStyle(color: Colors.white70),
                                       contentPadding: EdgeInsets.fromLTRB(
                                           10.0, 0.0, 20.0, 5.0),
                                       border: InputBorder.none,
@@ -1192,10 +1191,6 @@ class _ProfileEditFormState extends State<ProfileEditForm> {
                           textAlign: TextAlign.center,
                         ),
                       ),
-                      // Icon(
-                      //   Icons.chevron_right,
-                      //   color: Colors.white,
-                      // )
                     ],
                   ))
               : Container(),

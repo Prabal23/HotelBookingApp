@@ -57,10 +57,8 @@ class PopularPlacePageState extends State<PopularPlacePage> {
                                 BoxShadow(
                                   blurRadius: 2.0,
                                   color: Colors.black.withOpacity(.2),
-                                  //offset: Offset(6.0, 7.0),
                                 ),
                               ],
-                              //border: Border.all(color: Colors.grey, width: 0.3),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(100)),
                             ),
@@ -87,7 +85,6 @@ class PopularPlacePageState extends State<PopularPlacePage> {
                                           fontSize: 15,
                                           fontFamily: 'Oswald',
                                           fontWeight: FontWeight.w300),
-                                      //labelStyle: TextStyle(color: Colors.white70),
                                       contentPadding: EdgeInsets.fromLTRB(
                                           10.0, 0.0, 10.0, 0.0),
                                       border: InputBorder.none,
@@ -107,7 +104,6 @@ class PopularPlacePageState extends State<PopularPlacePage> {
                                 BoxShadow(
                                   blurRadius: 3.0,
                                   color: Colors.black.withOpacity(.2),
-                                  //offset: Offset(6.0, 7.0),
                                 ),
                               ],
                               borderRadius:
@@ -132,17 +128,6 @@ class PopularPlacePageState extends State<PopularPlacePage> {
                               fontSize: 16,
                               fontFamily: 'Oswald'),
                         ),
-                        // Container(
-                        //   child: Text(
-                        //     "Clear All",
-                        //     textAlign: TextAlign.start,
-                        //     style: TextStyle(
-                        //         color: header,
-                        //         fontSize: 13,
-                        //         fontFamily: 'Oswald',
-                        //         fontWeight: FontWeight.w400),
-                        //   ),
-                        //),
                       ],
                     )),
               ],
@@ -155,11 +140,6 @@ class PopularPlacePageState extends State<PopularPlacePage> {
                   SliverChildBuilderDelegate((BuildContext context, int index) {
                 return InsidePopularPlacecard();
               }, childCount: 6),
-              // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              //   crossAxisCount: 1,
-              //   childAspectRatio: (MediaQuery.of(context).size.width / 2) /
-              //       (MediaQuery.of(context).size.height / 5.58),
-              // ),
             ),
           )
         ],

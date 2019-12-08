@@ -68,7 +68,6 @@ class _LoginFormState extends State<LoginForm> {
                           margin: EdgeInsets.only(bottom: 20, top: 30),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
-                            //mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               Container(
                                   width: MediaQuery.of(context).size.width,
@@ -84,13 +83,10 @@ class _LoginFormState extends State<LoginForm> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
                                       Container(
-                                        //transform: Matrix4.translationValues(0.0, 0.0, 0.0),
                                         padding: EdgeInsets.all(1.0),
                                         child: CircleAvatar(
                                           radius: 6.0,
                                           backgroundColor: Colors.transparent,
-                                          // backgroundImage: AssetImage(
-                                          //     'assets/images/fb.png'),
                                         ),
                                         decoration: new BoxDecoration(
                                           color: fb,
@@ -98,7 +94,6 @@ class _LoginFormState extends State<LoginForm> {
                                               image: AssetImage(
                                                   'assets/images/fb.png'),
                                               fit: BoxFit.cover),
-                                          //shape: BoxShape.circle,
                                         ),
                                       ),
                                       Container(
@@ -126,7 +121,6 @@ class _LoginFormState extends State<LoginForm> {
                           margin: EdgeInsets.only(bottom: 20, top: 30),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.center,
-                            //mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               Container(
                                   width: MediaQuery.of(context).size.width,
@@ -142,7 +136,6 @@ class _LoginFormState extends State<LoginForm> {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: <Widget>[
                                       Container(
-                                        //transform: Matrix4.translationValues(0.0, 0.0, 0.0),
                                         padding: EdgeInsets.all(1.0),
                                         child: CircleAvatar(
                                           radius: 8.0,
@@ -191,7 +184,6 @@ class _LoginFormState extends State<LoginForm> {
             margin: EdgeInsets.only(bottom: 10, top: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              //mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Container(
                     width: MediaQuery.of(context).size.width,
@@ -215,7 +207,6 @@ class _LoginFormState extends State<LoginForm> {
                             fontSize: 15,
                             fontFamily: 'Oswald',
                             fontWeight: FontWeight.w300),
-                        //labelStyle: TextStyle(color: Colors.white70),
                         contentPadding:
                             EdgeInsets.fromLTRB(10.0, 5.0, 20.0, 5.0),
                         border: InputBorder.none,
@@ -228,7 +219,6 @@ class _LoginFormState extends State<LoginForm> {
             margin: EdgeInsets.only(bottom: 15, top: 0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              //mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Container(
                     width: MediaQuery.of(context).size.width,
@@ -255,7 +245,6 @@ class _LoginFormState extends State<LoginForm> {
                                   fontSize: 15,
                                   fontFamily: 'Oswald',
                                   fontWeight: FontWeight.w300),
-                              //labelStyle: TextStyle(color: Colors.white70),
                               contentPadding:
                                   EdgeInsets.fromLTRB(10.0, 5.0, 20.0, 5.0),
                               border: InputBorder.none,
@@ -314,7 +303,6 @@ class _LoginFormState extends State<LoginForm> {
             margin: EdgeInsets.only(bottom: 20, top: 15),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              //mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 GestureDetector(
                   onTap: () {

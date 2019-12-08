@@ -28,10 +28,8 @@ class _InsideSearchcardState extends State<InsideSearchcard> {
               BoxShadow(
                 blurRadius: 3.0,
                 color: Colors.black.withOpacity(.2),
-                //offset: Offset(6.0, 7.0),
               ),
             ],
-            // border: Border.all(width: 0.2, color: Colors.grey)
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -100,7 +98,6 @@ class _InsideSearchcardState extends State<InsideSearchcard> {
                       ],
                     ),
                     Container(
-                        //width: 100,
                         padding: EdgeInsets.all(7),
                         margin: EdgeInsets.only(left: 0, right: 0, top: 0),
                         decoration: BoxDecoration(

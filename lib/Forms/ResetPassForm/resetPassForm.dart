@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:roome/MainScreens/ResetPassPage/resetPassPage.dart';
+import 'package:roome/MainScreens/LoginPage/loginPage.dart';
 
 import '../../main.dart';
 
-class VerifyForm extends StatefulWidget {
+class ResetPassForm extends StatefulWidget {
   @override
-  _VerifyFormState createState() => _VerifyFormState();
+  _ResetPassFormState createState() => _ResetPassFormState();
 }
 
-class _VerifyFormState extends State<VerifyForm> {
+class _ResetPassFormState extends State<ResetPassForm> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,7 +28,7 @@ class _VerifyFormState extends State<VerifyForm> {
                       alignment: Alignment.centerLeft,
                       margin: EdgeInsets.only(top: 15, left: 10),
                       child: Text(
-                        "Verify Password Change",
+                        "Reset Password",
                         textAlign: TextAlign.start,
                         style: TextStyle(
                             color: Colors.black,
@@ -44,9 +44,10 @@ class _VerifyFormState extends State<VerifyForm> {
                 child: new Column(
                   children: <Widget>[
                     Container(
+                        alignment: Alignment.centerLeft,
                         margin: EdgeInsets.only(top: 12),
                         child: Text(
-                          "We have sent you a sms with a verification code to the number +880 1689 588 341",
+                          "Enter a new password",
                           textAlign: TextAlign.start,
                           style: TextStyle(
                               color: Colors.black38,
@@ -83,12 +84,13 @@ class _VerifyFormState extends State<VerifyForm> {
                               Flexible(
                                 child: TextField(
                                   //controller: phoneController,
+                                  obscureText: true,
                                   style: TextStyle(
                                     color: Colors.black87,
                                     fontFamily: 'Oswald',
                                   ),
                                   decoration: InputDecoration(
-                                    hintText: "Verification Code",
+                                    hintText: "New Password",
                                     hintStyle: TextStyle(
                                         color: Colors.black38,
                                         fontSize: 15,
@@ -162,7 +164,7 @@ class _VerifyFormState extends State<VerifyForm> {
                     Container(
                         margin: EdgeInsets.only(top: 12),
                         child: Text(
-                          "Code has been verified successfully",
+                          "Password has been reset successfully",
                           textAlign: TextAlign.start,
                           style: TextStyle(
                               color: Colors.black54,
@@ -180,7 +182,7 @@ class _VerifyFormState extends State<VerifyForm> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => ResetPassPage()));
+                                        builder: (context) => LoginPage()));
                               });
                             },
                             child: Container(
@@ -192,7 +194,7 @@ class _VerifyFormState extends State<VerifyForm> {
                                     borderRadius:
                                         BorderRadius.all(Radius.circular(100))),
                                 child: Text(
-                                  "Next",
+                                  "Login",
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 17,

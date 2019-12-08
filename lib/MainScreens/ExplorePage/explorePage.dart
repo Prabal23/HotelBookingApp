@@ -1,4 +1,3 @@
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -798,46 +797,6 @@ class ExplorePageState extends State<ExplorePage> {
                                                     fontWeight:
                                                         FontWeight.bold),
                                               )),
-                                          // Container(
-                                          //     margin: EdgeInsets.only(top: 2),
-                                          //     child: Text(
-                                          //       "Last visit : Jan 5 - Jan 11",
-                                          //       textAlign: TextAlign.start,
-                                          //       style: TextStyle(
-                                          //           color: Colors.white,
-                                          //           fontSize: 14,
-                                          //           fontFamily: 'Oswald',
-                                          //           fontWeight:
-                                          //               FontWeight.w300),
-                                          //     )),
-                                          // Row(
-                                          //   children: <Widget>[
-                                          //     Container(
-                                          //         margin:
-                                          //             EdgeInsets.only(top: 2),
-                                          //         child: Text(
-                                          //           "Hotel stayed : Grand Royal Hotel ",
-                                          //           textAlign: TextAlign.start,
-                                          //           style: TextStyle(
-                                          //               color: Colors.white,
-                                          //               fontSize: 13,
-                                          //               fontFamily:
-                                          //                   'Open Sans Condensed'),
-                                          //         )),
-                                          //     Container(
-                                          //         margin: EdgeInsets.only(
-                                          //             top: 0, left: 5),
-                                          //         child: Text(
-                                          //           "(1 Room - 2 Adults)",
-                                          //           textAlign: TextAlign.start,
-                                          //           style: TextStyle(
-                                          //               color: Colors.white,
-                                          //               fontSize: 14,
-                                          //               fontFamily:
-                                          //                   'Open Sans Condensed'),
-                                          //         )),
-                                          //   ],
-                                          // ),
                                           Container(
                                             width: 30,
                                             margin: EdgeInsets.only(top: 10),
@@ -849,7 +808,6 @@ class ExplorePageState extends State<ExplorePage> {
                                                   BoxShadow(
                                                     blurRadius: 3.0,
                                                     color: Colors.white,
-                                                    //offset: Offset(6.0, 7.0),
                                                   ),
                                                 ],
                                                 border: Border.all(
@@ -858,37 +816,6 @@ class ExplorePageState extends State<ExplorePage> {
                                           ),
                                           Container(
                                             margin: EdgeInsets.only(top: 10),
-                                            // child: Row(
-                                            //   children: <Widget>[
-                                            //     Expanded(
-                                            //       child: Container(
-                                            //         child: Text(
-                                            //           "Last Booked : Grand Royal Hotel",
-                                            //           textAlign: TextAlign.start,
-                                            //           maxLines: 1,
-                                            //           overflow: TextOverflow.ellipsis,
-                                            //           style: TextStyle(
-                                            //               color: Colors.white,
-                                            //               fontSize: 14,
-                                            //               fontFamily:
-                                            //                   'Open Sans Condensed'),
-                                            //         ),
-                                            //       ),
-                                            //     ),
-                                            //     Container(
-                                            //       margin: EdgeInsets.only(left: 5),
-                                            //       child: Text(
-                                            //         "(1 Room - 2 Persons)",
-                                            //         textAlign: TextAlign.start,
-                                            //         style: TextStyle(
-                                            //             color: Colors.white,
-                                            //             fontSize: 14,
-                                            //             fontFamily:
-                                            //                 'Open Sans Condensed'),
-                                            //       ),
-                                            //     ),
-                                            //   ],
-                                            // )
                                             child: Text.rich(
                                               TextSpan(
                                                 children: <TextSpan>[
@@ -907,123 +834,91 @@ class ExplorePageState extends State<ExplorePage> {
                                                           fontSize: 14,
                                                           fontFamily:
                                                               'Open Sans Condensed')),
-                                                  // can add more TextSpans here...
                                                 ],
                                               ),
                                             ),
                                           ),
-                                          Row(
-                                            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                            children: <Widget>[
-                                              GestureDetector(
-                                                onTap: () {
-                                                  Navigator.push(
-                                                      context,
-                                                      MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              HotelDetailsPage()));
-                                                },
-                                                child: Container(
-                                                    //width: 100,
-                                                    padding: EdgeInsets.all(10),
-                                                    margin: EdgeInsets.only(
-                                                        left: 0,
-                                                        right: 0,
-                                                        top: 10),
-                                                    decoration: BoxDecoration(
-                                                        color: header,
-                                                        borderRadius:
-                                                            BorderRadius.all(
-                                                                Radius.circular(
-                                                                    100))),
-                                                    child: Container(
+                                          Container(
+                                            child: Row(
+                                              children: <Widget>[
+                                                GestureDetector(
+                                                  onTap: () {
+                                                    Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) =>
+                                                                HotelDetailsPage()));
+                                                  },
+                                                  child: Container(
+                                                      padding: EdgeInsets.all(10),
                                                       margin: EdgeInsets.only(
-                                                          top: 3),
-                                                      child: Text(
-                                                        "Book This Hotel",
-                                                        style: TextStyle(
-                                                          color: Colors.white,
-                                                          fontSize: 15,
-                                                          fontFamily:
-                                                              'BebasNeue',
-                                                        ),
-                                                        textAlign:
-                                                            TextAlign.center,
-                                                      ),
-                                                    )),
-                                              ),
-                                              GestureDetector(
-                                                onTap: () {
-                                                  Navigator.push(
-                                                      context,
-                                                      MaterialPageRoute(
-                                                          builder: (context) =>
-                                                              HotelSearchPage()));
-                                                },
-                                                child: Container(
-                                                    margin: EdgeInsets.only(
-                                                        top: 8, left: 10),
-                                                    child: Row(
-                                                      children: <Widget>[
-                                                        Text(
-                                                          "More Hotels",
-                                                          textAlign:
-                                                              TextAlign.start,
+                                                          left: 0,
+                                                          right: 0,
+                                                          top: 10),
+                                                      decoration: BoxDecoration(
+                                                          color: header,
+                                                          borderRadius:
+                                                              BorderRadius.all(
+                                                                  Radius.circular(
+                                                                      100))),
+                                                      child: Container(
+                                                        margin: EdgeInsets.only(
+                                                            top: 3),
+                                                        child: Text(
+                                                          "Book This Hotel",
                                                           style: TextStyle(
-                                                              color:
-                                                                  Colors.white,
-                                                              fontSize: 14,
-                                                              fontFamily:
-                                                                  'Oswald',
-                                                              fontWeight:
-                                                                  FontWeight
-                                                                      .w400),
+                                                            color: Colors.white,
+                                                            fontSize: 15,
+                                                            fontFamily:
+                                                                'BebasNeue',
+                                                          ),
+                                                          textAlign:
+                                                              TextAlign.center,
                                                         ),
-                                                        Container(
-                                                            margin:
-                                                                EdgeInsets.only(
-                                                                    top: 3),
-                                                            child: Icon(
-                                                                Icons
-                                                                    .chevron_right,
-                                                                color: Colors
-                                                                    .white,
-                                                                size: 17))
-                                                      ],
-                                                    )),
-                                              ),
-                                              // Container(
-                                              //     padding: EdgeInsets.all(10),
-                                              //     margin: EdgeInsets.only(
-                                              //         left: 10,
-                                              //         right: 20,
-                                              //         top: 10,
-                                              //         bottom: 0),
-                                              //     decoration: BoxDecoration(
-                                              //         color: Colors.white
-                                              //             .withOpacity(0.6),
-                                              //         border: Border.all(
-                                              //             color: Colors.grey,
-                                              //             width: 0.5),
-                                              //         borderRadius:
-                                              //             BorderRadius.all(
-                                              //                 Radius.circular(
-                                              //                     100))),
-                                              //     child: Container(
-                                              //       margin:
-                                              //           EdgeInsets.only(top: 3),
-                                              //       child: Text(
-                                              //         "More Hotels",
-                                              //         style: TextStyle(
-                                              //           color: Colors.black54,
-                                              //           fontSize: 15,
-                                              //           fontFamily: 'BebasNeue',
-                                              //         ),
-                                              //         textAlign:
-                                              //             TextAlign.center,
-                                              //       ),
-                                              //     )),
-                                            ],
+                                                      )),
+                                                ),
+                                                GestureDetector(
+                                                  onTap: () {
+                                                    Navigator.push(
+                                                        context,
+                                                        MaterialPageRoute(
+                                                            builder: (context) =>
+                                                                HotelSearchPage()));
+                                                  },
+                                                  child: Container(
+                                                      margin: EdgeInsets.only(
+                                                          top: 8, left: 10),
+                                                      child: Row(
+                                                        children: <Widget>[
+                                                          Text(
+                                                            "More Hotels",
+                                                            textAlign:
+                                                                TextAlign.start,
+                                                            style: TextStyle(
+                                                                color:
+                                                                    Colors.white,
+                                                                fontSize: 14,
+                                                                fontFamily:
+                                                                    'Oswald',
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w400),
+                                                          ),
+                                                          Container(
+                                                              margin:
+                                                                  EdgeInsets.only(
+                                                                      top: 3),
+                                                              child: Icon(
+                                                                  Icons
+                                                                      .chevron_right,
+                                                                  color: Colors
+                                                                      .white,
+                                                                  size: 17))
+                                                        ],
+                                                      )),
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                         ],
                                       ),
@@ -1074,7 +969,6 @@ class ExplorePageState extends State<ExplorePage> {
                   )),
               Container(
                 margin: EdgeInsets.only(left: 0, right: 0, top: 10),
-                //color: sub_white,
                 width: MediaQuery.of(context).size.width,
                 padding: EdgeInsets.only(left: 0),
                 height: 162,
@@ -1121,7 +1015,6 @@ class ExplorePageState extends State<ExplorePage> {
                   )),
               Container(
                 margin: EdgeInsets.only(left: 0, right: 0, top: 10, bottom: 10),
-                //color: sub_white,
                 width: MediaQuery.of(context).size.width,
                 padding: EdgeInsets.only(left: 0),
                 height: 140,
@@ -1183,17 +1076,14 @@ class ExplorePageState extends State<ExplorePage> {
                     ],
                   )),
               Container(
-                //color: Colors.red,
                 margin: EdgeInsets.only(top: 15),
                 width: MediaQuery.of(context).size.width,
-                //padding: EdgeInsets.only(left: 0),
                 height: 230,
                 child: Container(
                   child: MediaQuery.removePadding(
                     context: context,
                     removeTop: true,
                     child: new ListView.builder(
-                      //scrollDirection: Axis.horizontal,
                       itemBuilder: (BuildContext context, int index) =>
                           HomeBestDealsCard(),
                       itemCount: 2,

@@ -155,11 +155,6 @@ class _RecentSearchPageState extends State<RecentSearchPage> {
                   SliverChildBuilderDelegate((BuildContext context, int index) {
                 return InsideSearchcard();
               }, childCount: 6),
-              // gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              //   crossAxisCount: 2,
-              //   childAspectRatio: (MediaQuery.of(context).size.width / 2) /
-              //       (MediaQuery.of(context).size.height / 2.9),
-              // ),
             ),
           )
         ],

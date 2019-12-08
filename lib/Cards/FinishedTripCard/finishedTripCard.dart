@@ -62,14 +62,6 @@ class _FinishedTripCardState extends State<FinishedTripCard> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          // Text("Finished",
-                          //   textAlign: TextAlign.start,
-                          //   style: TextStyle(
-                          //       color: header,
-                          //       fontSize: 13,
-                          //       fontFamily: 'Oswald',
-                          //       fontWeight: FontWeight.w400),
-                          // ),
                           Icon(Icons.done, color: header, size: 18)
                         ],
                       ),

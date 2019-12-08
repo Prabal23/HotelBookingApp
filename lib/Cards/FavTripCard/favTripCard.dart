@@ -45,7 +45,6 @@ class _FavTripCardState extends State<FavTripCard> {
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(15.0),
                       bottomLeft: Radius.circular(15.0)),
-                  // border: Border.all(width: 0.2, color: Colors.grey)
                 ),
                 child: Stack(
                   children: <Widget>[

@@ -1,4 +1,3 @@
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:roome/MainScreens/ExplorePage/explorePage.dart';
@@ -15,8 +14,6 @@ class HomePage extends StatefulWidget {
 }
 
 class HomePageState extends State<HomePage> {
-  List imgList = ["assets/images/p5.jpg", "assets/images/l1.jpg"];
-  void imageChange(int index) {}
   int _selectedPage = 0;
   final pageOptions = [
     ExplorePage(),

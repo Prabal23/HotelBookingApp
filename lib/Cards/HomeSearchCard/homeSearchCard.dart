@@ -26,10 +26,8 @@ class _HomeSearchCardState extends State<HomeSearchCard> {
               BoxShadow(
                 blurRadius: 3.0,
                 color: Colors.black.withOpacity(.2),
-                //offset: Offset(6.0, 7.0),
               ),
             ],
-            // border: Border.all(width: 0.2, color: Colors.grey)
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

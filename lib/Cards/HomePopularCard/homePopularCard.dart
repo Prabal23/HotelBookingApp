@@ -33,10 +33,8 @@ class _HomePopularCardState extends State<HomePopularCard> {
               BoxShadow(
                 blurRadius: 3.0,
                 color: Colors.black.withOpacity(.5),
-                //offset: Offset(6.0, 7.0),
               ),
             ],
-            // border: Border.all(width: 0.2, color: Colors.grey)
           ),
           child: Stack(
             children: <Widget>[

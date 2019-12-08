@@ -1,4 +1,3 @@
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:roome/MainScreens/H1/h1.dart';
@@ -62,13 +61,10 @@ class HelpCenterPageState extends State<HelpCenterPage> {
                                     EdgeInsets.only(left: 20, right: 0, top: 0),
                                 decoration: BoxDecoration(
                                   color: Colors.white,
-                                  // border: Border.all(
-                                  //     color: Colors.grey, width: 0.3),
                                   boxShadow: [
                                     BoxShadow(
                                       blurRadius: 3.0,
                                       color: Colors.black.withOpacity(.2),
-                                      //offset: Offset(6.0, 7.0),
                                     ),
                                   ],
                                   borderRadius:

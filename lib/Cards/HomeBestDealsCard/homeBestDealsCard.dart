@@ -29,7 +29,6 @@ class _HomeBestDealsCardState extends State<HomeBestDealsCard> {
               BoxShadow(
                 blurRadius: 3.0,
                 color: Colors.black.withOpacity(.2),
-                //offset: Offset(6.0, 7.0),
               ),
             ],
           ),
@@ -47,7 +46,6 @@ class _HomeBestDealsCardState extends State<HomeBestDealsCard> {
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(15.0),
                       bottomLeft: Radius.circular(15.0)),
-                  // border: Border.all(width: 0.2, color: Colors.grey)
                 ),
                 child: Stack(
                   children: <Widget>[
@@ -88,25 +86,10 @@ class _HomeBestDealsCardState extends State<HomeBestDealsCard> {
                                       fontFamily: 'Oswald',
                                       fontWeight: FontWeight.w400),
                                 )),
-                            // Container(
-                            //     margin:
-                            //         EdgeInsets.only(top: 0, left: 0),
-                            //     child: Text(
-                            //       index == 0
-                            //           ? "Manchester, England"
-                            //           : "Leistershire, England",
-                            //       textAlign: TextAlign.start,
-                            //       style: TextStyle(
-                            //           color: Colors.black54,
-                            //           fontSize: 13,
-                            //           fontFamily: 'Oswald',
-                            //           fontWeight: FontWeight.w300),
-                            //     )),
                           ],
                         ),
                       ),
                       Container(
-                        //width: MediaQuery.of(context).size.width,
                         margin: EdgeInsets.only(top: 0, bottom: 10),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -120,9 +103,6 @@ class _HomeBestDealsCardState extends State<HomeBestDealsCard> {
                                     Container(
                                       child: Row(
                                         children: <Widget>[
-                                          // Icon(Icons.location_on,
-                                          //     color: header,
-                                          //     size: 14),
                                           Text(
                                             "Leistershire, England",
                                             textAlign: TextAlign.start,

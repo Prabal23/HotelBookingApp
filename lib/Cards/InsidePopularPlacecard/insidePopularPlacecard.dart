@@ -18,7 +18,6 @@ class _InsidePopularPlacecardState extends State<InsidePopularPlacecard> {
           );
         },
         child: Container(
-          //height: 200,
           margin: EdgeInsets.only(left: 5, right: 5, bottom: 5, top: 5),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(15.0)),
@@ -27,10 +26,8 @@ class _InsidePopularPlacecardState extends State<InsidePopularPlacecard> {
               BoxShadow(
                 blurRadius: 3.0,
                 color: Colors.black.withOpacity(.2),
-                //offset: Offset(6.0, 7.0),
               ),
             ],
-            // border: Border.all(width: 0.2, color: Colors.grey)
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,

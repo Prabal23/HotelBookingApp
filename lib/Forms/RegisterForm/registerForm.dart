@@ -47,7 +47,6 @@ class _RegisterFormState extends State<RegisterForm> {
               margin: EdgeInsets.only(top: 0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                //mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Container(
                       alignment: Alignment.topLeft,
@@ -60,114 +59,111 @@ class _RegisterFormState extends State<RegisterForm> {
                             fontFamily: 'BebasNeue',
                             fontWeight: FontWeight.normal),
                       )),
-                  Row(
-                    children: <Widget>[
-                      Expanded(
-                        child: Container(
-                          margin: EdgeInsets.only(bottom: 20, top: 30),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            //mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Container(
-                                  width: MediaQuery.of(context).size.width,
-                                  padding: EdgeInsets.all(10),
-                                  margin: EdgeInsets.only(left: 20, right: 10),
-                                  decoration: BoxDecoration(
-                                      color: fb,
-                                      border: Border.all(
-                                          color: Colors.white, width: 0.5),
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(100))),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      Container(
-                                        //transform: Matrix4.translationValues(0.0, 0.0, 0.0),
-                                        padding: EdgeInsets.all(1.0),
-                                        child: CircleAvatar(
-                                          radius: 6.0,
-                                          backgroundColor: Colors.transparent,
-                                          // backgroundImage: AssetImage(
-                                          //     'assets/images/fb.png'),
-                                        ),
-                                        decoration: new BoxDecoration(
-                                          color: fb,
-                                          image: DecorationImage(
-                                              image: AssetImage(
-                                                  'assets/images/fb.png'),
-                                              fit: BoxFit.cover),
-                                          //shape: BoxShape.circle,
-                                        ),
-                                      ),
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(top: 3, left: 5),
-                                        child: Text(
-                                          "Facebook",
-                                          style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 17,
-                                            fontFamily: 'BebasNeue',
+                  Container(
+                    child: Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(bottom: 20, top: 30),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: <Widget>[
+                                Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    padding: EdgeInsets.all(10),
+                                    margin: EdgeInsets.only(left: 20, right: 10),
+                                    decoration: BoxDecoration(
+                                        color: fb,
+                                        border: Border.all(
+                                            color: Colors.white, width: 0.5),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(100))),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Container(
+                                          padding: EdgeInsets.all(1.0),
+                                          child: CircleAvatar(
+                                            radius: 6.0,
+                                            backgroundColor: Colors.transparent,
                                           ),
-                                          textAlign: TextAlign.center,
+                                          decoration: new BoxDecoration(
+                                            color: fb,
+                                            image: DecorationImage(
+                                                image: AssetImage(
+                                                    'assets/images/fb.png'),
+                                                fit: BoxFit.cover),
+                                          ),
                                         ),
-                                      ),
-                                    ],
-                                  )),
-                            ],
+                                        Container(
+                                          margin:
+                                              EdgeInsets.only(top: 3, left: 5),
+                                          child: Text(
+                                            "Facebook",
+                                            style: TextStyle(
+                                              color: Colors.white,
+                                              fontSize: 17,
+                                              fontFamily: 'BebasNeue',
+                                            ),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ),
+                                      ],
+                                    )),
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                      Expanded(
-                        child: Container(
-                          margin: EdgeInsets.only(bottom: 20, top: 30),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            //mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Container(
-                                  width: MediaQuery.of(context).size.width,
-                                  padding: EdgeInsets.all(10),
-                                  margin: EdgeInsets.only(left: 10, right: 20),
-                                  decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      border: Border.all(
-                                          color: Colors.grey, width: 0.5),
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(100))),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: <Widget>[
-                                      Container(
-                                        //transform: Matrix4.translationValues(0.0, 0.0, 0.0),
-                                        padding: EdgeInsets.all(1.0),
-                                        child: CircleAvatar(
-                                          radius: 8.0,
-                                          backgroundImage: AssetImage(
-                                              'assets/images/google.png'),
-                                        ),
-                                      ),
-                                      Container(
-                                        margin:
-                                            EdgeInsets.only(top: 3, left: 5),
-                                        child: Text(
-                                          "Google",
-                                          style: TextStyle(
-                                            color: Colors.black,
-                                            fontSize: 17,
-                                            fontFamily: 'BebasNeue',
+                        Expanded(
+                          child: Container(
+                            margin: EdgeInsets.only(bottom: 20, top: 30),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              //mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Container(
+                                    width: MediaQuery.of(context).size.width,
+                                    padding: EdgeInsets.all(10),
+                                    margin: EdgeInsets.only(left: 10, right: 20),
+                                    decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        border: Border.all(
+                                            color: Colors.grey, width: 0.5),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(100))),
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: <Widget>[
+                                        Container(
+                                          //transform: Matrix4.translationValues(0.0, 0.0, 0.0),
+                                          padding: EdgeInsets.all(1.0),
+                                          child: CircleAvatar(
+                                            radius: 8.0,
+                                            backgroundImage: AssetImage(
+                                                'assets/images/google.png'),
                                           ),
-                                          textAlign: TextAlign.center,
                                         ),
-                                      ),
-                                    ],
-                                  )),
-                            ],
+                                        Container(
+                                          margin:
+                                              EdgeInsets.only(top: 3, left: 5),
+                                          child: Text(
+                                            "Google",
+                                            style: TextStyle(
+                                              color: Colors.black,
+                                              fontSize: 17,
+                                              fontFamily: 'BebasNeue',
+                                            ),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                        ),
+                                      ],
+                                    )),
+                              ],
+                            ),
                           ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                   Container(
                       margin: EdgeInsets.only(top: 4),
@@ -183,22 +179,6 @@ class _RegisterFormState extends State<RegisterForm> {
                 ],
               ),
             ),
-            // Container(
-            //     margin: EdgeInsets.only(top: 10, left: 35),
-            //     child: Row(
-            //       mainAxisAlignment: MainAxisAlignment.start,
-            //       children: <Widget>[
-            //         Text(
-            //           "All bookings will be done with below information *",
-            //           textAlign: TextAlign.center,
-            //           style: TextStyle(
-            //               color: header,
-            //               fontSize: 13,
-            //               fontFamily: 'Oswald',
-            //               fontWeight: FontWeight.w400),
-            //         ),
-            //       ],
-            //     )),
             Container(
               margin: EdgeInsets.only(bottom: 10, top: 20),
               child: Column(
@@ -314,7 +294,6 @@ class _RegisterFormState extends State<RegisterForm> {
               margin: EdgeInsets.only(bottom: 20, top: 0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
-                //mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Container(
                       width: MediaQuery.of(context).size.width,
@@ -371,7 +350,6 @@ class _RegisterFormState extends State<RegisterForm> {
                     margin: EdgeInsets.only(bottom: 10, top: 0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
-                      //mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Container(
                             width: MediaQuery.of(context).size.width,
@@ -398,7 +376,6 @@ class _RegisterFormState extends State<RegisterForm> {
                                     fontSize: 15,
                                     fontFamily: 'Oswald',
                                     fontWeight: FontWeight.w300),
-                                //labelStyle: TextStyle(color: Colors.white70),
                                 contentPadding:
                                     EdgeInsets.fromLTRB(10.0, 5.0, 20.0, 5.0),
                                 border: InputBorder.none,

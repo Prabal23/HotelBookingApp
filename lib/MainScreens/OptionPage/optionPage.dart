@@ -1,4 +1,3 @@
-import 'package:carousel_pro/carousel_pro.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:roome/MainScreens/LoginPage/loginPage.dart';
@@ -14,11 +13,6 @@ class OptionPage extends StatefulWidget {
 }
 
 class OptionPageState extends State<OptionPage> {
-  List imgList = ["assets/images/p5.jpg", "assets/images/l1.jpg"];
-  void imageChange(int index){
-
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +25,6 @@ class OptionPageState extends State<OptionPage> {
                 margin: EdgeInsets.only(top: 0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  //mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Stack(
                       children: <Widget>[
@@ -48,25 +41,6 @@ class OptionPageState extends State<OptionPage> {
                             child: null,
                           ),
                         ),
-                        // new SizedBox(
-                        //   height: 410.0,
-                        //   width: MediaQuery.of(context).size.width,
-                        //   child: new Carousel(
-                        //     images: [
-                        //       //new NetworkImage('https://cdn-images-1.medium.com/max/2000/1*GqdzzfB_BHorv7V2NV7Jgg.jpeg'),
-                        //       new ExactAssetImage("assets/images/p5.jpg"),
-                        //       new ExactAssetImage("assets/images/l2.jpg")
-                        //     ],
-                        //     autoplay: false,
-                        //     dotSize: 5.0,
-                        //     dotSpacing: 15.0,
-                        //     dotColor: Colors.grey[300],
-                        //     dotIncreasedColor: header,
-                        //     indicatorBgPadding: 20.0,
-                        //     dotBgColor: Colors.white
-                        //     //borderRadius: true,
-                        //   ),
-                        // ),
                         Container(
                           margin: EdgeInsets.only(top: 25),
                           child: BackButton(),
@@ -102,7 +76,6 @@ class OptionPageState extends State<OptionPage> {
                 margin: EdgeInsets.only(bottom: 20, top: 30),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
-                  //mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     GestureDetector(
                       onTap: () {
@@ -143,13 +116,6 @@ class OptionPageState extends State<OptionPage> {
                           margin: EdgeInsets.only(left: 20, right: 20, top: 10),
                           decoration: BoxDecoration(
                               color: Colors.white,
-                              // boxShadow: [
-                              //   BoxShadow(
-                              //     blurRadius: 5.0,
-                              //     color: Colors.black.withOpacity(.5),
-                              //     //offset: Offset(6.0, 7.0),
-                              //   ),
-                              // ],
                               border:
                                   Border.all(color: Colors.grey, width: 0.5),
                               borderRadius:

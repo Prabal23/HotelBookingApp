@@ -66,7 +66,6 @@ class _UpcomingTripCardState extends State<UpcomingTripCard> {
                     BoxShadow(
                       blurRadius: 3.0,
                       color: Colors.black.withOpacity(.2),
-                      //offset: Offset(6.0, 7.0),
                     ),
                   ],
                 ),
@@ -84,7 +83,6 @@ class _UpcomingTripCardState extends State<UpcomingTripCard> {
                         borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(15.0),
                             bottomLeft: Radius.circular(15.0)),
-                        // border: Border.all(width: 0.2, color: Colors.grey)
                       ),
                       child: Stack(
                         children: <Widget>[
@@ -129,7 +127,6 @@ class _UpcomingTripCardState extends State<UpcomingTripCard> {
                               ),
                             ),
                             Container(
-                              //width: MediaQuery.of(context).size.width,
                               margin: EdgeInsets.only(top: 0, bottom: 10),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -255,7 +252,6 @@ class _UpcomingTripCardState extends State<UpcomingTripCard> {
                       BoxShadow(
                         blurRadius: 3.0,
                         color: Colors.white,
-                        //offset: Offset(6.0, 7.0),
                       ),
                     ],
                     border: Border.all(width: 0.5, color: Colors.white)),
