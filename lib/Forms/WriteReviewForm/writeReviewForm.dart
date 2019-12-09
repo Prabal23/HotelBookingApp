@@ -9,7 +9,6 @@ class WriteReviewForm extends StatefulWidget {
 
 class _WriteReviewFormState extends State<WriteReviewForm> {
   String _ratingStatus = 'No review';
-
   int _rating = 0;
 
   void rate(int rating) {
