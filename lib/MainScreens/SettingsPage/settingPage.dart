@@ -184,11 +184,6 @@ class SettingsPageState extends State<SettingsPage> {
                                 ),
                                 Row(
                                   children: <Widget>[
-                                    // Icon(
-                                    //   Icons.attach_money,
-                                    //   color: Colors.black54,
-                                    //   size: 18,
-                                    // ),
                                     Text(
                                       "BDT",
                                       textAlign: TextAlign.start,

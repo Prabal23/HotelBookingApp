@@ -12,8 +12,6 @@ class _ReviewCardState extends State<ReviewCard> {
   Widget build(BuildContext context) {
     return Container(
       child: Container(
-        //color: Colors.blue,
-        //padding: EdgeInsets.all(15),
         margin: EdgeInsets.only(left: 0, right: 0, bottom: 5, top: 20),
         child: Column(
           children: <Widget>[
@@ -26,7 +24,6 @@ class _ReviewCardState extends State<ReviewCard> {
                       Center(
                         child: Container(
                           margin: EdgeInsets.only(right: 0, top: 0),
-                          //transform: Matrix4.translationValues(0.0, 0.0, 0.0),
                           padding: EdgeInsets.all(1.0),
                           child: CircleAvatar(
                             radius: 25.0,
@@ -41,7 +38,6 @@ class _ReviewCardState extends State<ReviewCard> {
                               BoxShadow(
                                 blurRadius: 3.0,
                                 color: Colors.black.withOpacity(.2),
-                                //offset: Offset(6.0, 7.0),
                               ),
                             ],
                           ),
@@ -143,7 +139,6 @@ class _ReviewCardState extends State<ReviewCard> {
                       BoxShadow(
                         blurRadius: 3.0,
                         color: Colors.black38,
-                        //offset: Offset(6.0, 7.0),
                       ),
                     ],
                     border: Border.all(width: 0.15, color: Colors.black38))),

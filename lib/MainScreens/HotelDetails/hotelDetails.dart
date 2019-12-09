@@ -17,25 +17,7 @@ class HotelDetailsPage extends StatefulWidget {
 }
 
 class HotelDetailsPageState extends State<HotelDetailsPage> {
-  int page = 0, bookmark = 0;
-  String des = "";
-  String firstHalf;
-  String secondHalf;
-  bool flag = true;
-
-  @override
-  void initState() {
-    des =
-        "This hotel is located in the city center, surrounded by the well-known scenic spots like Tiananmen Square, Forbidden City and the Temple of Heaven. It has 300 rooms equipped with complete facilities and functions. The Old House 1918 Café is located on the first floor of the auxiliary building and from the top floor guests can have one of the best views of Beijing’s old city.";
-    if (des.length > 150) {
-      firstHalf = des.substring(0, 150);
-      secondHalf = des.substring(150, des.length);
-    } else {
-      firstHalf = des;
-      secondHalf = "";
-    }
-    super.initState();
-  }
+  int bookmark = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -95,9 +77,7 @@ class HotelDetailsPageState extends State<HotelDetailsPage> {
                   ),
                 ),
                 new Container(
-                  //constraints: BoxConstraints(maxHeight: 150.0),
                   child: new Material(
-                    //color: header,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
                       padding: EdgeInsets.all(0),
@@ -108,10 +88,8 @@ class HotelDetailsPageState extends State<HotelDetailsPage> {
                             BoxShadow(
                               blurRadius: 3.0,
                               color: Colors.black.withOpacity(.2),
-                              //offset: Offset(6.0, 7.0),
                             ),
                           ],
-                          //border: Border.all(color: sub_white, width: 0.3),
                           borderRadius: BorderRadius.all(Radius.circular(100))),
                       child: new TabBar(
                         labelStyle: TextStyle(
@@ -139,7 +117,6 @@ class HotelDetailsPageState extends State<HotelDetailsPage> {
                             fontWeight: FontWeight.w300,
                             fontSize: 14),
                         labelColor: header,
-                        //labelStyle: TextStyle(fontSize: 15),
                       ),
                     ),
                   ),
@@ -158,10 +135,5 @@ class HotelDetailsPageState extends State<HotelDetailsPage> {
             ),
           ),
         ));
-  }
-
-  void pageRouting() {
-    Navigator.push(
-        context, MaterialPageRoute(builder: (context) => RoomDetailsPage()));
   }
 }

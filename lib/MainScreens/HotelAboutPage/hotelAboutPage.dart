@@ -379,20 +379,6 @@ class _HotelAboutPageState extends State<HotelAboutPage> {
                                       ),
                                     ),
                                   ),
-                                  // Container(
-                                  //   margin: EdgeInsets.only(
-                                  //       right: 15),
-                                  //   child: Text(
-                                  //     "95%",
-                                  //     textAlign: TextAlign.start,
-                                  //     style: TextStyle(
-                                  //         color: Colors.black54,
-                                  //         fontSize: 13,
-                                  //         fontFamily: 'Oswald',
-                                  //         fontWeight:
-                                  //             FontWeight.w300),
-                                  //   ),
-                                  // ),
                                 ],
                               ),
                             ),
@@ -444,20 +430,6 @@ class _HotelAboutPageState extends State<HotelAboutPage> {
                                       ),
                                     ),
                                   ),
-                                  // Container(
-                                  //   margin: EdgeInsets.only(
-                                  //       right: 15),
-                                  //   child: Text(
-                                  //     "80%",
-                                  //     textAlign: TextAlign.start,
-                                  //     style: TextStyle(
-                                  //         color: Colors.black54,
-                                  //         fontSize: 13,
-                                  //         fontFamily: 'Oswald',
-                                  //         fontWeight:
-                                  //             FontWeight.w300),
-                                  //   ),
-                                  // ),
                                 ],
                               ),
                             ),
@@ -509,20 +481,6 @@ class _HotelAboutPageState extends State<HotelAboutPage> {
                                       ),
                                     ),
                                   ),
-                                  // Container(
-                                  //   margin: EdgeInsets.only(
-                                  //       right: 15),
-                                  //   child: Text(
-                                  //     "85%",
-                                  //     textAlign: TextAlign.start,
-                                  //     style: TextStyle(
-                                  //         color: Colors.black54,
-                                  //         fontSize: 13,
-                                  //         fontFamily: 'Oswald',
-                                  //         fontWeight:
-                                  //             FontWeight.w300),
-                                  //   ),
-                                  // ),
                                 ],
                               ),
                             ),
@@ -574,20 +532,6 @@ class _HotelAboutPageState extends State<HotelAboutPage> {
                                       ),
                                     ),
                                   ),
-                                  // Container(
-                                  //   margin: EdgeInsets.only(
-                                  //       right: 15),
-                                  //   child: Text(
-                                  //     "70%",
-                                  //     textAlign: TextAlign.start,
-                                  //     style: TextStyle(
-                                  //         color: Colors.black54,
-                                  //         fontSize: 13,
-                                  //         fontFamily: 'Oswald',
-                                  //         fontWeight:
-                                  //             FontWeight.w300),
-                                  //   ),
-                                  // ),
                                 ],
                               ),
                             ),
@@ -639,20 +583,6 @@ class _HotelAboutPageState extends State<HotelAboutPage> {
                                       ),
                                     ),
                                   ),
-                                  // Container(
-                                  //   margin: EdgeInsets.only(
-                                  //       right: 15),
-                                  //   child: Text(
-                                  //     "78%",
-                                  //     textAlign: TextAlign.start,
-                                  //     style: TextStyle(
-                                  //         color: Colors.black54,
-                                  //         fontSize: 13,
-                                  //         fontFamily: 'Oswald',
-                                  //         fontWeight:
-                                  //             FontWeight.w300),
-                                  //   ),
-                                  // ),
                                 ],
                               ),
                             ),

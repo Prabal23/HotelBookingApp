@@ -8,8 +8,7 @@ class WriteReviewForm extends StatefulWidget {
 }
 
 class _WriteReviewFormState extends State<WriteReviewForm> {
-  int page = 0;
-  String review = '', _ratingStatus = 'No review';
+  String _ratingStatus = 'No review';
 
   int _rating = 0;
 
@@ -95,7 +94,6 @@ class _WriteReviewFormState extends State<WriteReviewForm> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Row(
-                  //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -172,10 +170,8 @@ class _WriteReviewFormState extends State<WriteReviewForm> {
                     BoxShadow(
                       blurRadius: 3.0,
                       color: Colors.black.withOpacity(.2),
-                      //offset: Offset(6.0, 7.0),
                     ),
                   ],
-                  //border: Border.all(color: Colors.grey, width: 0.3),
                   borderRadius: BorderRadius.all(Radius.circular(25)),
                 ),
                 child: Row(
@@ -197,7 +193,6 @@ class _WriteReviewFormState extends State<WriteReviewForm> {
                           child: TextField(
                             maxLines: null,
                             //controller: phoneController,
-                            keyboardType: TextInputType.emailAddress,
                             style: TextStyle(
                               color: Colors.black87,
                               fontFamily: 'Oswald',
@@ -209,7 +204,6 @@ class _WriteReviewFormState extends State<WriteReviewForm> {
                                   fontSize: 15,
                                   fontFamily: 'Oswald',
                                   fontWeight: FontWeight.w300),
-                              //labelStyle: TextStyle(color: Colors.white70),
                               contentPadding:
                                   EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
                               border: InputBorder.none,

@@ -24,9 +24,7 @@ class TnCPageState extends State<TnCPage> {
                 children: <Widget>[
                   Container(
                     margin: EdgeInsets.only(top: 0, left: 10, right: 20),
-                    //alignment: Alignment.topLeft,
                     child: Row(
-                      //crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Container(
                           alignment: Alignment.topLeft,
@@ -59,7 +57,6 @@ class TnCPageState extends State<TnCPage> {
                             BoxShadow(
                               blurRadius: 3.0,
                               color: Colors.black38,
-                              //offset: Offset(6.0, 7.0),
                             ),
                           ],
                           border: Border.all(width: 0.15, color: Colors.black38))),
@@ -132,27 +129,6 @@ class TnCPageState extends State<TnCPage> {
                                   fontWeight: FontWeight.w300),
                             ),
                           ),
-                          // Container(
-                          //   margin: EdgeInsets.only(top: 20, left: 25, right: 25),
-                          //   width: MediaQuery.of(context).size.width,
-                          //   child: Row(
-                          //     children: <Widget>[
-                          //       Text(
-                          //         "Give Feedback",
-                          //         textAlign: TextAlign.start,
-                          //         style: TextStyle(
-                          //             color: header,
-                          //             fontSize: 14,
-                          //             fontFamily: 'Oswald',
-                          //             fontWeight: FontWeight.w400),
-                          //       ),
-                          //       Container(
-                          //           margin: EdgeInsets.only(top: 3),
-                          //           child: Icon(Icons.chevron_right,
-                          //               color: header, size: 18))
-                          //     ],
-                          //   ),
-                          // ),
                           Container(
                               width: MediaQuery.of(context).size.width,
                               margin: EdgeInsets.only(top: 30, left: 25, right: 25, bottom: 30),

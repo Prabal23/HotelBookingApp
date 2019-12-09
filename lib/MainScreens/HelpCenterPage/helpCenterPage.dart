@@ -95,7 +95,6 @@ class HelpCenterPageState extends State<HelpCenterPage> {
                                               fontSize: 15,
                                               fontFamily: 'Oswald',
                                               fontWeight: FontWeight.w300),
-                                          //labelStyle: TextStyle(color: Colors.white70),
                                           contentPadding: EdgeInsets.fromLTRB(
                                               10.0, 0.0, 10.0, 0.0),
                                           border: InputBorder.none,

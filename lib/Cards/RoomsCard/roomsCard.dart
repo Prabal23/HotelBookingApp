@@ -27,7 +27,6 @@ class _RoomsCardState extends State<RoomsCard> {
               BoxShadow(
                 blurRadius: 3.0,
                 color: Colors.black.withOpacity(.2),
-                //offset: Offset(6.0, 7.0),
               ),
             ],
           ),
@@ -45,7 +44,6 @@ class _RoomsCardState extends State<RoomsCard> {
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(15.0),
                       topRight: Radius.circular(15.0)),
-                  // border: Border.all(width: 0.2, color: Colors.grey)
                 ),
                 child: Stack(
                   children: <Widget>[
@@ -69,7 +67,6 @@ class _RoomsCardState extends State<RoomsCard> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Container(
-                      //width: MediaQuery.of(context).size.width,
                       margin: EdgeInsets.only(top: 0, bottom: 10, right: 10),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,

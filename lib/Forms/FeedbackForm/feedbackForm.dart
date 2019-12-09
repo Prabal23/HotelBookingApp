@@ -61,10 +61,8 @@ class _FeedbackFormState extends State<FeedbackForm> {
                     BoxShadow(
                       blurRadius: 3.0,
                       color: Colors.black.withOpacity(.2),
-                      //offset: Offset(6.0, 7.0),
                     ),
                   ],
-                  //border: Border.all(color: Colors.grey, width: 0.3),
                   borderRadius: BorderRadius.all(Radius.circular(100)),
                 ),
                 child: Row(
@@ -78,7 +76,7 @@ class _FeedbackFormState extends State<FeedbackForm> {
                         )),
                     Flexible(
                       child: TextField(
-                        //controller: phoneController,
+                        //controller: emailController,
                         keyboardType: TextInputType.emailAddress,
                         style: TextStyle(
                           color: Colors.black87,
@@ -91,7 +89,6 @@ class _FeedbackFormState extends State<FeedbackForm> {
                               fontSize: 15,
                               fontFamily: 'Oswald',
                               fontWeight: FontWeight.w300),
-                          //labelStyle: TextStyle(color: Colors.white70),
                           contentPadding:
                               EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
                           border: InputBorder.none,
@@ -113,10 +110,8 @@ class _FeedbackFormState extends State<FeedbackForm> {
                     BoxShadow(
                       blurRadius: 3.0,
                       color: Colors.black.withOpacity(.2),
-                      //offset: Offset(6.0, 7.0),
                     ),
                   ],
-                  //border: Border.all(color: Colors.grey, width: 0.3),
                   borderRadius: BorderRadius.all(Radius.circular(25)),
                 ),
                 child: Row(
@@ -149,7 +144,6 @@ class _FeedbackFormState extends State<FeedbackForm> {
                                   fontSize: 15,
                                   fontFamily: 'Oswald',
                                   fontWeight: FontWeight.w300),
-                              //labelStyle: TextStyle(color: Colors.white70),
                               contentPadding:
                                   EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
                               border: InputBorder.none,
@@ -173,10 +167,8 @@ class _FeedbackFormState extends State<FeedbackForm> {
                     BoxShadow(
                       blurRadius: 3.0,
                       color: Colors.black.withOpacity(.2),
-                      //offset: Offset(6.0, 7.0),
                     ),
                   ],
-                  //border: Border.all(color: Colors.grey, width: 0.3),
                   borderRadius: BorderRadius.all(Radius.circular(25)),
                 ),
                 child: Row(
@@ -210,7 +202,6 @@ class _FeedbackFormState extends State<FeedbackForm> {
                                   fontSize: 15,
                                   fontFamily: 'Oswald',
                                   fontWeight: FontWeight.w300),
-                              //labelStyle: TextStyle(color: Colors.white70),
                               contentPadding:
                                   EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
                               border: InputBorder.none,

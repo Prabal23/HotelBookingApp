@@ -4,6 +4,7 @@ import 'package:roome/MainScreens/ChangePassPage/changePassPage.dart';
 import 'package:roome/MainScreens/CouponPage/couponPage.dart';
 import 'package:roome/MainScreens/HelpCenterPage/helpCenterPage.dart';
 import 'package:roome/MainScreens/InviteFriendsPage/inviteFriendsPage.dart';
+import 'package:roome/MainScreens/LoginPage/loginPage.dart';
 import 'package:roome/MainScreens/PaymentPage/paymentPage.dart';
 import 'dart:io';
 
@@ -50,8 +51,7 @@ class ProfilePageState extends State<ProfilePage> {
                                 children: <Widget>[
                                   Container(
                                       alignment: Alignment.centerLeft,
-                                      margin:
-                                          EdgeInsets.only(top: 0, left: 0),
+                                      margin: EdgeInsets.only(top: 0, left: 0),
                                       child: Text(
                                         "John Smith",
                                         textAlign: TextAlign.start,
@@ -62,8 +62,7 @@ class ProfilePageState extends State<ProfilePage> {
                                       )),
                                   Container(
                                       alignment: Alignment.centerLeft,
-                                      margin:
-                                          EdgeInsets.only(top: 0, left: 0),
+                                      margin: EdgeInsets.only(top: 0, left: 0),
                                       child: Row(
                                         children: <Widget>[
                                           Text(
@@ -484,24 +483,29 @@ class ProfilePageState extends State<ProfilePage> {
                           ],
                           border:
                               Border.all(width: 0.15, color: Colors.black38))),
-                  Container(
-                    margin: EdgeInsets.only(top: 20, left: 25, right: 25),
-                    width: MediaQuery.of(context).size.width,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text(
-                          "Logout",
-                          textAlign: TextAlign.start,
-                          style: TextStyle(
-                              color: Colors.black38,
-                              fontSize: 14,
-                              fontFamily: 'Oswald',
-                              fontWeight: FontWeight.w400),
-                        ),
-                        Icon(Icons.chevron_right,
-                            color: Colors.black26, size: 20)
-                      ],
+                  GestureDetector(
+                    onTap: (){
+                      _showLogoutDialog();
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(top: 20, left: 25, right: 25),
+                      width: MediaQuery.of(context).size.width,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Text(
+                            "Logout",
+                            textAlign: TextAlign.start,
+                            style: TextStyle(
+                                color: Colors.black38,
+                                fontSize: 14,
+                                fontFamily: 'Oswald',
+                                fontWeight: FontWeight.w400),
+                          ),
+                          Icon(Icons.chevron_right,
+                              color: Colors.black26, size: 20)
+                        ],
+                      ),
                     ),
                   ),
                   Container(
@@ -523,5 +527,101 @@ class ProfilePageState extends State<ProfilePage> {
             ),
           ),
         ));
+  }
+
+  Future<Null> _showLogoutDialog() async {
+    return showDialog<Null>(
+      context: context,
+      barrierDismissible: true,
+      builder: (BuildContext context) {
+        return new AlertDialog(
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(20.0))),
+          title: Center(
+            child: SingleChildScrollView(
+              child: Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                        margin: EdgeInsets.only(top: 12),
+                        child: Text(
+                          "Do you want to logout?",
+                          textAlign: TextAlign.start,
+                          style: TextStyle(
+                              color: Colors.black54,
+                              fontSize: 14,
+                              fontFamily: 'Oswald',
+                              fontWeight: FontWeight.w400),
+                        )),
+                    Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                Navigator.of(context).pop();
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => LoginPage()));
+                              });
+                            },
+                            child: Container(
+                                padding: EdgeInsets.all(10),
+                                margin: EdgeInsets.only(
+                                    left: 0, right: 5, top: 20, bottom: 0),
+                                decoration: BoxDecoration(
+                                    color: header,
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(100))),
+                                child: Text(
+                                  "Yes",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 17,
+                                    fontFamily: 'BebasNeue',
+                                  ),
+                                  textAlign: TextAlign.center,
+                                )),
+                          ),
+                        ),
+                        Expanded(
+                          child: GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                Navigator.of(context).pop();
+                              });
+                            },
+                            child: Container(
+                                padding: EdgeInsets.all(10),
+                                margin: EdgeInsets.only(
+                                    left: 5, right: 0, top: 20, bottom: 0),
+                                decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    border: Border.all(color: Colors.black54, width: 0.5),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(100))),
+                                child: Text(
+                                  "No",
+                                  style: TextStyle(
+                                    color: Colors.black54,
+                                    fontSize: 17,
+                                    fontFamily: 'BebasNeue',
+                                  ),
+                                  textAlign: TextAlign.center,
+                                )),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        );
+      },
+    );
   }
 }
