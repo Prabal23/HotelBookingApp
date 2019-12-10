@@ -1,7 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../main.dart';
+
 class InviteFriendsPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
@@ -13,7 +15,9 @@ class InviteFriendsPageState extends State<InviteFriendsPage> {
   int page = 0;
   @override
   Widget build(BuildContext context) {
+    final key = new GlobalKey<ScaffoldState>();
     return Scaffold(
+        key: key,
         backgroundColor: Colors.white,
         body: SafeArea(
           child: Column(
@@ -190,34 +194,48 @@ class InviteFriendsPageState extends State<InviteFriendsPage> {
                                                 ),
                                               )),
                                         ),
-                                        Container(
-                                            padding: EdgeInsets.all(15),
-                                            margin: EdgeInsets.only(
-                                                left: 0,
-                                                right: 15,
-                                                top: 10,
-                                                bottom: 0),
-                                            decoration: BoxDecoration(
-                                                color: header,
-                                                border: Border.all(
-                                                    color: header, width: 0.2),
-                                                borderRadius: BorderRadius.only(
-                                                    topRight:
-                                                        Radius.circular(15),
-                                                    bottomRight:
-                                                        Radius.circular(15))),
-                                            child: Container(
-                                              margin: EdgeInsets.only(top: 5),
-                                              child: Text(
-                                                "Copy",
-                                                style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 20,
-                                                  fontFamily: 'BebasNeue',
+                                        GestureDetector(
+                                          onTap: () {
+                                            Clipboard.setData(new ClipboardData(
+                                                text: "ROOME - 123456"));
+                                            key.currentState
+                                                .showSnackBar(new SnackBar(
+                                              content: new Text("Copied"),
+                                            ));
+                                          },
+                                          child: Container(
+                                              padding: EdgeInsets.all(15),
+                                              margin: EdgeInsets.only(
+                                                  left: 0,
+                                                  right: 15,
+                                                  top: 10,
+                                                  bottom: 0),
+                                              decoration: BoxDecoration(
+                                                  color: header,
+                                                  border: Border.all(
+                                                      color: header,
+                                                      width: 0.2),
+                                                  borderRadius:
+                                                      BorderRadius.only(
+                                                          topRight:
+                                                              Radius.circular(
+                                                                  15),
+                                                          bottomRight:
+                                                              Radius.circular(
+                                                                  15))),
+                                              child: Container(
+                                                margin: EdgeInsets.only(top: 5),
+                                                child: Text(
+                                                  "Copy",
+                                                  style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 20,
+                                                    fontFamily: 'BebasNeue',
+                                                  ),
+                                                  textAlign: TextAlign.center,
                                                 ),
-                                                textAlign: TextAlign.center,
-                                              ),
-                                            )),
+                                              )),
+                                        ),
                                       ],
                                     ),
                                     Container(

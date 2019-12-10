@@ -527,7 +527,8 @@ class ExplorePageState extends State<ExplorePage> {
                                                       )),
                                                   Flexible(
                                                     child: TextField(
-                                                      controller: placeController,
+                                                      controller:
+                                                          placeController,
                                                       keyboardType:
                                                           TextInputType
                                                               .emailAddress,
@@ -707,7 +708,16 @@ class ExplorePageState extends State<ExplorePage> {
                                                     context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            HotelSearchPage(placeController.text, month, day, month1, day1, roomInt, adultInt, childrenInt)),
+                                                            HotelSearchPage(
+                                                                placeController
+                                                                    .text,
+                                                                month,
+                                                                day,
+                                                                month1,
+                                                                day1,
+                                                                roomInt,
+                                                                adultInt,
+                                                                childrenInt)),
                                                   );
                                                 },
                                                 child: Container(
@@ -852,7 +862,8 @@ class ExplorePageState extends State<ExplorePage> {
                                                                 HotelDetailsPage()));
                                                   },
                                                   child: Container(
-                                                      padding: EdgeInsets.all(10),
+                                                      padding:
+                                                          EdgeInsets.all(10),
                                                       margin: EdgeInsets.only(
                                                           left: 0,
                                                           right: 0,
@@ -861,8 +872,9 @@ class ExplorePageState extends State<ExplorePage> {
                                                           color: header,
                                                           borderRadius:
                                                               BorderRadius.all(
-                                                                  Radius.circular(
-                                                                      100))),
+                                                                  Radius
+                                                                      .circular(
+                                                                          100))),
                                                       child: Container(
                                                         margin: EdgeInsets.only(
                                                             top: 3),
@@ -885,7 +897,16 @@ class ExplorePageState extends State<ExplorePage> {
                                                         context,
                                                         MaterialPageRoute(
                                                             builder: (context) =>
-                                                                HotelSearchPage(placeController.text, month, day, month1, day1, roomInt, adultInt, childrenInt)));
+                                                                HotelSearchPage(
+                                                                    placeController
+                                                                        .text,
+                                                                    month,
+                                                                    day,
+                                                                    month1,
+                                                                    day1,
+                                                                    roomInt,
+                                                                    adultInt,
+                                                                    childrenInt)));
                                                   },
                                                   child: Container(
                                                       margin: EdgeInsets.only(
@@ -897,8 +918,8 @@ class ExplorePageState extends State<ExplorePage> {
                                                             textAlign:
                                                                 TextAlign.start,
                                                             style: TextStyle(
-                                                                color:
-                                                                    Colors.white,
+                                                                color: Colors
+                                                                    .white,
                                                                 fontSize: 14,
                                                                 fontFamily:
                                                                     'Oswald',
@@ -908,8 +929,10 @@ class ExplorePageState extends State<ExplorePage> {
                                                           ),
                                                           Container(
                                                               margin:
-                                                                  EdgeInsets.only(
-                                                                      top: 3),
+                                                                  EdgeInsets
+                                                                      .only(
+                                                                          top:
+                                                                              3),
                                                               child: Icon(
                                                                   Icons
                                                                       .chevron_right,
@@ -1061,7 +1084,15 @@ class ExplorePageState extends State<ExplorePage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => HotelSearchPage(placeController.text, month, day, month1, day1, roomInt, adultInt, childrenInt)));
+                                  builder: (context) => HotelSearchPage(
+                                      "",
+                                      "",
+                                      "",
+                                      "",
+                                      "",
+                                      0,
+                                      0,
+                                      0)));
                         },
                         child: Container(
                           child: Text(
@@ -1372,18 +1403,20 @@ class ExplorePageState extends State<ExplorePage> {
                         ],
                       ),
                       (rooms == 0 || (adult + children == 0))
-                          ? Container(
-                              width: MediaQuery.of(context).size.width,
-                              margin: EdgeInsets.only(top: 20, left: 0),
-                              child: Text(
-                                error,
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                    color: Colors.redAccent,
-                                    fontSize: 15,
-                                    fontFamily: 'Oswald',
-                                    fontWeight: FontWeight.w300),
-                              ))
+                          ? error == ""
+                              ? Container()
+                              : Container(
+                                  width: MediaQuery.of(context).size.width,
+                                  margin: EdgeInsets.only(top: 20, left: 0),
+                                  child: Text(
+                                    error,
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                        color: Colors.redAccent,
+                                        fontSize: 15,
+                                        fontFamily: 'Oswald',
+                                        fontWeight: FontWeight.w300),
+                                  ))
                           : Container(),
                       Row(
                         children: <Widget>[

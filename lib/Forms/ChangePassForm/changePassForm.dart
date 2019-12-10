@@ -8,9 +8,14 @@ class ChangePassForm extends StatefulWidget {
 }
 
 class _ChangePassFormState extends State<ChangePassForm> {
+  TextEditingController curPass = new TextEditingController();
+  TextEditingController newPass = new TextEditingController();
+  TextEditingController conPass = new TextEditingController();
   @override
   Widget build(BuildContext context) {
+    final key = new GlobalKey<ScaffoldState>();
     return Container(
+      key: key,
       child: Expanded(
         child: SingleChildScrollView(
           child: Container(
@@ -56,8 +61,8 @@ class _ChangePassFormState extends State<ChangePassForm> {
                               )),
                           Flexible(
                             child: TextField(
-                              //controller: phoneController,
-                              keyboardType: TextInputType.emailAddress,
+                              controller: curPass,
+                              obscureText: true,
                               style: TextStyle(
                                 color: Colors.black87,
                                 fontFamily: 'Oswald',
@@ -73,6 +78,11 @@ class _ChangePassFormState extends State<ChangePassForm> {
                                     EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
                                 border: InputBorder.none,
                               ),
+                              onChanged: (value) {
+                                setState(() {
+                                  curPass.text = value;
+                                });
+                              },
                             ),
                           ),
                         ],
@@ -117,8 +127,8 @@ class _ChangePassFormState extends State<ChangePassForm> {
                               )),
                           Flexible(
                             child: TextField(
-                              //controller: phoneController,
-                              keyboardType: TextInputType.emailAddress,
+                              controller: newPass,
+                              obscureText: true,
                               style: TextStyle(
                                 color: Colors.black87,
                                 fontFamily: 'Oswald',
@@ -166,8 +176,8 @@ class _ChangePassFormState extends State<ChangePassForm> {
                               )),
                           Flexible(
                             child: TextField(
-                              //controller: phoneController,
-                              keyboardType: TextInputType.emailAddress,
+                              controller: conPass,
+                              obscureText: true,
                               style: TextStyle(
                                 color: Colors.black87,
                                 fontFamily: 'Oswald',
@@ -190,7 +200,18 @@ class _ChangePassFormState extends State<ChangePassForm> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    _showDoneDialog();
+                    if (curPass.text != "123456") {
+                      key.currentState.showSnackBar(new SnackBar(
+                        content: new Text("Current Password doesn't match!"),
+                      ));
+                    } else if (newPass.text != conPass.text) {
+                      key.currentState.showSnackBar(new SnackBar(
+                        content:
+                            new Text("Password confirmation is incorrect!"),
+                      ));
+                    } else {
+                      _showDoneDialog();
+                    }
                   },
                   child: Container(
                       width: MediaQuery.of(context).size.width,

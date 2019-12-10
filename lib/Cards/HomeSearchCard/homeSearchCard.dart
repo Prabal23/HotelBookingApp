@@ -14,7 +14,7 @@ class _HomeSearchCardState extends State<HomeSearchCard> {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => HotelSearchPage("", "", "", "", "", 0, 0, 0)),
+            MaterialPageRoute(builder: (context) => HotelSearchPage("Bangladesh", "10", "Sep", "14", "Sep", 1, 2, 0)),
           );
         },
         child: Container(
