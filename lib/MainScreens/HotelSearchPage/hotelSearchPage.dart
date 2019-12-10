@@ -10,6 +10,17 @@ import 'dart:io';
 import '../../main.dart';
 
 class HotelSearchPage extends StatefulWidget {
+  final place;
+  final month;
+  final day;
+  final month1;
+  final day1;
+  final roomInt;
+  final adultInt;
+  final childInt;
+
+  HotelSearchPage(this.place, this.month, this.day, this.month1, this.day1,
+      this.roomInt, this.adultInt, this.childInt);
   @override
   State<StatefulWidget> createState() {
     return HotelSearchPageState();
@@ -322,7 +333,23 @@ class HotelSearchPageState extends State<HotelSearchPage> {
 
   @override
   void initState() {
-    srch.text = "London";
+    setState(() {
+      srch.text = widget.place;
+      month = widget.month;
+      day = widget.day;
+      month1 = widget.month1;
+      day1 = widget.day1;
+      roomInt = widget.roomInt;
+      adultInt = widget.adultInt;
+      childrenInt = widget.childInt;
+      if (roomInt != 0 && (adultInt + childrenInt) != 0) {
+        count1 = 1;
+      }
+      if (month != "" && day != "" && month1 != "" && day1 != "") {
+        count = 1;
+      }
+    });
+
     day = DateFormat("dd").format(_date);
     _dropDownDayItems = getDropDowndayItems();
     day = _dropDownDayItems[0].value;

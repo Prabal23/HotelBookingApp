@@ -14,7 +14,7 @@ class _HomePopularCardState extends State<HomePopularCard> {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => HotelSearchPage()),
+            MaterialPageRoute(builder: (context) => HotelSearchPage("", "", "", "", "", 0, 0, 0)),
           );
         },
         child: new Container(

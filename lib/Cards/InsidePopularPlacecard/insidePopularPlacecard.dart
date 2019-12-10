@@ -14,7 +14,7 @@ class _InsidePopularPlacecardState extends State<InsidePopularPlacecard> {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => HotelSearchPage()),
+            MaterialPageRoute(builder: (context) => HotelSearchPage("", "", "", "", "", 0, 0, 0)),
           );
         },
         child: Container(

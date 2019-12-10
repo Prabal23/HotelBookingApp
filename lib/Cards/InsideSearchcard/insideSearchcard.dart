@@ -16,7 +16,7 @@ class _InsideSearchcardState extends State<InsideSearchcard> {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => HotelSearchPage()),
+            MaterialPageRoute(builder: (context) => HotelSearchPage("", "", "", "", "", 0, 0, 0)),
           );
         },
         child: Container(

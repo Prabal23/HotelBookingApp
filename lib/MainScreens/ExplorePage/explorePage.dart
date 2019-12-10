@@ -182,6 +182,8 @@ class ExplorePageState extends State<ExplorePage> {
     "Dec"
   ];
 
+  TextEditingController placeController = new TextEditingController();
+
   List<DropdownMenuItem<String>> _dropDownDayItems,
       _dropDownDayItems330,
       _dropDownDayItemsLeapp,
@@ -525,7 +527,7 @@ class ExplorePageState extends State<ExplorePage> {
                                                       )),
                                                   Flexible(
                                                     child: TextField(
-                                                      //controller: phoneController,
+                                                      controller: placeController,
                                                       keyboardType:
                                                           TextInputType
                                                               .emailAddress,
@@ -705,7 +707,7 @@ class ExplorePageState extends State<ExplorePage> {
                                                     context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            HotelSearchPage()),
+                                                            HotelSearchPage(placeController.text, month, day, month1, day1, roomInt, adultInt, childrenInt)),
                                                   );
                                                 },
                                                 child: Container(
@@ -883,7 +885,7 @@ class ExplorePageState extends State<ExplorePage> {
                                                         context,
                                                         MaterialPageRoute(
                                                             builder: (context) =>
-                                                                HotelSearchPage()));
+                                                                HotelSearchPage(placeController.text, month, day, month1, day1, roomInt, adultInt, childrenInt)));
                                                   },
                                                   child: Container(
                                                       margin: EdgeInsets.only(
@@ -1059,7 +1061,7 @@ class ExplorePageState extends State<ExplorePage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => HotelSearchPage()));
+                                  builder: (context) => HotelSearchPage(placeController.text, month, day, month1, day1, roomInt, adultInt, childrenInt)));
                         },
                         child: Container(
                           child: Text(

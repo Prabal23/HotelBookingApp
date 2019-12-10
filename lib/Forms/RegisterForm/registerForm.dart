@@ -71,7 +71,8 @@ class _RegisterFormState extends State<RegisterForm> {
                                 Container(
                                     width: MediaQuery.of(context).size.width,
                                     padding: EdgeInsets.all(10),
-                                    margin: EdgeInsets.only(left: 20, right: 10),
+                                    margin:
+                                        EdgeInsets.only(left: 20, right: 10),
                                     decoration: BoxDecoration(
                                         color: fb,
                                         border: Border.all(
@@ -79,7 +80,8 @@ class _RegisterFormState extends State<RegisterForm> {
                                         borderRadius: BorderRadius.all(
                                             Radius.circular(100))),
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: <Widget>[
                                         Container(
                                           padding: EdgeInsets.all(1.0),
@@ -124,7 +126,8 @@ class _RegisterFormState extends State<RegisterForm> {
                                 Container(
                                     width: MediaQuery.of(context).size.width,
                                     padding: EdgeInsets.all(10),
-                                    margin: EdgeInsets.only(left: 10, right: 20),
+                                    margin:
+                                        EdgeInsets.only(left: 10, right: 20),
                                     decoration: BoxDecoration(
                                         color: Colors.white,
                                         border: Border.all(
@@ -132,7 +135,8 @@ class _RegisterFormState extends State<RegisterForm> {
                                         borderRadius: BorderRadius.all(
                                             Radius.circular(100))),
                                     child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
                                       children: <Widget>[
                                         Container(
                                           //transform: Matrix4.translationValues(0.0, 0.0, 0.0),
@@ -462,22 +466,28 @@ class _RegisterFormState extends State<RegisterForm> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 //mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                      width: MediaQuery.of(context).size.width,
-                      padding: EdgeInsets.all(15),
-                      margin: EdgeInsets.only(left: 20, right: 20),
-                      decoration: BoxDecoration(
-                          color: header,
-                          borderRadius: BorderRadius.all(Radius.circular(100))),
-                      child: Text(
-                        "Sign up",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 17,
-                          fontFamily: 'BebasNeue',
-                        ),
-                        textAlign: TextAlign.center,
-                      )),
+                  GestureDetector(
+                    onTap: () {
+                      _showDoneDialog();
+                    },
+                    child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        padding: EdgeInsets.all(15),
+                        margin: EdgeInsets.only(left: 20, right: 20),
+                        decoration: BoxDecoration(
+                            color: header,
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(100))),
+                        child: Text(
+                          "Sign up",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 17,
+                            fontFamily: 'BebasNeue',
+                          ),
+                          textAlign: TextAlign.center,
+                        )),
+                  ),
                   Container(
                     margin: EdgeInsets.only(top: 20),
                     child: Row(
@@ -520,6 +530,91 @@ class _RegisterFormState extends State<RegisterForm> {
           ],
         ),
       ),
+    );
+  }
+
+  Future<Null> _showDoneDialog() async {
+    return showDialog<Null>(
+      context: context,
+      barrierDismissible: true,
+      builder: (BuildContext context) {
+        return new AlertDialog(
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.all(Radius.circular(20.0))),
+          title: Center(
+            child: SingleChildScrollView(
+              child: Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                                color: tnc % 2 == 0 ? Colors.redAccent : header,
+                                width: 1.5),
+                            borderRadius: BorderRadius.circular(100),
+                            color: Colors.white),
+                        child: Icon(
+                          tnc % 2 == 0 ? Icons.close : Icons.done,
+                          color: tnc % 2 == 0 ? Colors.redAccent : header,
+                          size: 50,
+                        )),
+                    Container(
+                        margin: EdgeInsets.only(top: 12),
+                        child: Text(
+                          tnc % 2 == 0
+                              ? "Make sure you are agree with our terms and condition"
+                              : "Registration completed successfully!",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.black54,
+                              fontSize: 14,
+                              fontFamily: 'Oswald',
+                              fontWeight: FontWeight.w400),
+                        )),
+                    Row(
+                      children: <Widget>[
+                        Expanded(
+                          child: GestureDetector(
+                            onTap: () {
+                              setState(() {
+                                Navigator.of(context).pop();
+                              });
+                              tnc % 2 == 0
+                                  ? null
+                                  : Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => LoginPage()));
+                            },
+                            child: Container(
+                                padding: EdgeInsets.all(10),
+                                margin: EdgeInsets.only(
+                                    left: 0, right: 0, top: 20, bottom: 0),
+                                decoration: BoxDecoration(
+                                    color: header,
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(100))),
+                                child: Text(
+                                  tnc % 2 == 0 ? "OK" : "Login",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 17,
+                                    fontFamily: 'BebasNeue',
+                                  ),
+                                  textAlign: TextAlign.center,
+                                )),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 }
