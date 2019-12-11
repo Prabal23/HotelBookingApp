@@ -127,6 +127,40 @@ class _UsedCouponCardState extends State<UsedCouponCard> {
                                       ],
                                     ),
                                   ),
+                                  Container(
+                                        margin: EdgeInsets.only(
+                                            left: 0, right: 0, top: 3),
+                                        decoration: BoxDecoration(
+                                            color: Colors.white,
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(15))),
+                                        child: Container(
+                                          margin: EdgeInsets.only(top: 0),
+                                          child: Row(
+                                            children: <Widget>[
+                                              Container(
+                                                margin: EdgeInsets.only(left: 1.5),
+                                                child: Icon(
+                                                  Icons.timer,
+                                                  color: Colors.grey[500],
+                                                  size: 14,
+                                                ),
+                                              ),
+                                              Container(
+                                                margin:
+                                                    EdgeInsets.only(left: 5),
+                                                child: Text(
+                                                  "Sep 21, 2019",
+                                                  style: TextStyle(
+                                                      color: Colors.grey[400],
+                                                      fontSize: 11,
+                                                      fontFamily: 'Oswald'),
+                                                  textAlign: TextAlign.center,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        )),
                                 ],
                               ),
                             ),
@@ -143,7 +177,7 @@ class _UsedCouponCardState extends State<UsedCouponCard> {
                                   child: Row(
                                     children: <Widget>[
                                       Text(
-                                        "Sep 21, 2019",
+                                        "# C_ROOME - 123456",
                                         style: TextStyle(
                                             color: Colors.grey[500],
                                             fontSize: 12,

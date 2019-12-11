@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:roome/MainScreens/LoginPage/loginPage.dart';
 
 import '../../main.dart';
 
@@ -13,9 +14,21 @@ class _ChangePassFormState extends State<ChangePassForm> {
   TextEditingController conPass = new TextEditingController();
   @override
   Widget build(BuildContext context) {
-    final key = new GlobalKey<ScaffoldState>();
+    _showMsg(msg) {
+      //
+      final snackBar = SnackBar(
+        content: Text(msg),
+        action: SnackBarAction(
+          label: 'Close',
+          onPressed: () {
+            // Some code to undo the change!
+          },
+        ),
+      );
+      Scaffold.of(context).showSnackBar(snackBar);
+    }
+
     return Container(
-      key: key,
       child: Expanded(
         child: SingleChildScrollView(
           child: Container(
@@ -78,11 +91,6 @@ class _ChangePassFormState extends State<ChangePassForm> {
                                     EdgeInsets.fromLTRB(10.0, 0.0, 10.0, 0.0),
                                 border: InputBorder.none,
                               ),
-                              onChanged: (value) {
-                                setState(() {
-                                  curPass.text = value;
-                                });
-                              },
                             ),
                           ),
                         ],
@@ -200,15 +208,16 @@ class _ChangePassFormState extends State<ChangePassForm> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    if (curPass.text != "123456") {
-                      key.currentState.showSnackBar(new SnackBar(
-                        content: new Text("Current Password doesn't match!"),
-                      ));
+                    if (curPass.text == "") {
+                      _showMsg("Current password field is blank!");
+                    } else if (newPass.text == "") {
+                      _showMsg("New password field is blank!");
+                    } else if (conPass.text == "") {
+                      _showMsg("Password confirmation field is blank!");
+                    } else if (curPass.text != "123456") {
+                      _showMsg("Current password is incorrect!");
                     } else if (newPass.text != conPass.text) {
-                      key.currentState.showSnackBar(new SnackBar(
-                        content:
-                            new Text("Password confirmation is incorrect!"),
-                      ));
+                      _showMsg("Password confirmation is incorrect!");
                     } else {
                       _showDoneDialog();
                     }
@@ -280,6 +289,10 @@ class _ChangePassFormState extends State<ChangePassForm> {
                             onTap: () {
                               setState(() {
                                 Navigator.of(context).pop();
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => LoginPage()));
                               });
                             },
                             child: Container(
