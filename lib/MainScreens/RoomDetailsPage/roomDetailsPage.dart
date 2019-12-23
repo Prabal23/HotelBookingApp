@@ -410,7 +410,7 @@ class RoomDetailsPageState extends State<RoomDetailsPage> {
                             width: MediaQuery.of(context).size.width,
                             decoration: BoxDecoration(
                                 image: DecorationImage(
-                                  image: AssetImage("assets/images/h2.jpg"),
+                                  image: AssetImage("assets/images/premium.jpeg"),
                                   fit: BoxFit.cover,
                                 ),
                                 borderRadius: BorderRadius.only(
@@ -435,7 +435,7 @@ class RoomDetailsPageState extends State<RoomDetailsPage> {
                                         child: Row(
                                           children: <Widget>[
                                             Text(
-                                              "Deluxe Room",
+                                              "Premium Room",
                                               maxLines: 2,
                                               overflow: TextOverflow.ellipsis,
                                               style: TextStyle(
@@ -458,7 +458,7 @@ class RoomDetailsPageState extends State<RoomDetailsPage> {
                                                       BorderRadius.circular(
                                                           15)),
                                               child: Text(
-                                                "15% Off",
+                                                "18% Off",
                                                 textAlign: TextAlign.start,
                                                 style: TextStyle(
                                                     color: Colors.white,
@@ -496,7 +496,7 @@ class RoomDetailsPageState extends State<RoomDetailsPage> {
                                                   children: <Widget>[
                                                     Expanded(
                                                       child: Text(
-                                                        "Grand Sultan Tea Resort and Golf",
+                                                        "Paradise Hotel & Spa",
                                                         textAlign:
                                                             TextAlign.start,
                                                         style: TextStyle(
@@ -523,7 +523,7 @@ class RoomDetailsPageState extends State<RoomDetailsPage> {
                                                       color: Colors.black87,
                                                       size: 16),
                                                   Text(
-                                                    "180",
+                                                    "245",
                                                     textAlign: TextAlign.start,
                                                     style: TextStyle(
                                                         color: Colors.black87,
@@ -539,7 +539,7 @@ class RoomDetailsPageState extends State<RoomDetailsPage> {
                                                     margin: EdgeInsets.only(
                                                         left: 5),
                                                     child: Text(
-                                                      "153",
+                                                      "240.9",
                                                       textAlign:
                                                           TextAlign.start,
                                                       style: TextStyle(

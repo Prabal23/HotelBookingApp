@@ -4,6 +4,9 @@ import 'package:roome/MainScreens/HotelSearchPage/hotelSearchPage.dart';
 import '../../main.dart';
 
 class InsideSearchcard extends StatefulWidget {
+  final searchList;
+
+  InsideSearchcard(this.searchList);
   @override
   _InsideSearchcardState createState() => _InsideSearchcardState();
 }
@@ -16,7 +19,17 @@ class _InsideSearchcardState extends State<InsideSearchcard> {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => HotelSearchPage("Bangladesh", "10", "Sep", "14", "Sep", 1, 2, 0)),
+            MaterialPageRoute(
+                builder: (context) => HotelSearchPage(
+                      "${widget.searchList['name']}",
+                      "${widget.searchList['stDate']}",
+                      "${widget.searchList['stMon']}",
+                      "${widget.searchList['endDate']}",
+                      "${widget.searchList['endMon']}",
+                      widget.searchList['room'],
+                      widget.searchList['adult'],
+                      widget.searchList['children'],
+                    )),
           );
         },
         child: Container(
@@ -40,7 +53,7 @@ class _InsideSearchcardState extends State<InsideSearchcard> {
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage("assets/images/bd.jpg"),
+                        image: AssetImage("${widget.searchList['image']}"),
                         fit: BoxFit.cover,
                       ),
                       borderRadius: BorderRadius.only(
@@ -60,7 +73,7 @@ class _InsideSearchcardState extends State<InsideSearchcard> {
                         Container(
                             margin: EdgeInsets.only(top: 5, left: 0, bottom: 0),
                             child: Text(
-                              "Bangladesh",
+                              "${widget.searchList['name']}",
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                               style: TextStyle(
@@ -72,7 +85,7 @@ class _InsideSearchcardState extends State<InsideSearchcard> {
                         Container(
                             margin: EdgeInsets.only(top: 0, left: 0),
                             child: Text(
-                              "Sep 10 - Sep 14",
+                              "${widget.searchList['date']}",
                               textAlign: TextAlign.start,
                               style: TextStyle(
                                   color: Colors.black87,
@@ -86,7 +99,7 @@ class _InsideSearchcardState extends State<InsideSearchcard> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
                                 Text(
-                                  "1 Room - 2 Adults",
+                                  "${widget.searchList['person']}",
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
                                       color: Colors.black87,
@@ -109,7 +122,7 @@ class _InsideSearchcardState extends State<InsideSearchcard> {
                           child: Row(
                             children: <Widget>[
                               Text(
-                                "85 Hotels",
+                                "${widget.searchList['num']} Hotels",
                                 style: TextStyle(
                                   color: header,
                                   fontSize: 14,

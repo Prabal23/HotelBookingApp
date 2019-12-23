@@ -4,6 +4,9 @@ import 'package:roome/MainScreens/HotelDetails/hotelDetails.dart';
 import '../../main.dart';
 
 class FinishedTripCard extends StatefulWidget {
+  final finished;
+
+  FinishedTripCard(this.finished);
   @override
   _FinishedTripCardState createState() => _FinishedTripCardState();
 }
@@ -29,7 +32,7 @@ class _FinishedTripCardState extends State<FinishedTripCard> {
                     Row(
                       children: <Widget>[
                         Text(
-                          "12 Aug - 20 Aug",
+                          "${widget.finished['date']}",
                           textAlign: TextAlign.start,
                           style: TextStyle(
                               color: Colors.black87,
@@ -47,7 +50,7 @@ class _FinishedTripCardState extends State<FinishedTripCard> {
                               fontWeight: FontWeight.w300),
                         ),
                         Text(
-                          "2 Rooms - 5 Persons",
+                          "${widget.finished['person']}",
                           textAlign: TextAlign.start,
                           style: TextStyle(
                               color: Colors.black87,
@@ -92,7 +95,7 @@ class _FinishedTripCardState extends State<FinishedTripCard> {
                       width: 100,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage("assets/images/h4.jpg"),
+                          image: AssetImage("${widget.finished['image']}"),
                           fit: BoxFit.cover,
                         ),
                         borderRadius: BorderRadius.only(
@@ -130,7 +133,7 @@ class _FinishedTripCardState extends State<FinishedTripCard> {
                                       margin: EdgeInsets.only(
                                           top: 5, left: 0, bottom: 0),
                                       child: Text(
-                                        "Queens Hotel",
+                                        "${widget.finished['name']}",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
@@ -158,7 +161,7 @@ class _FinishedTripCardState extends State<FinishedTripCard> {
                                             child: Row(
                                               children: <Widget>[
                                                 Text(
-                                                  "Leistershire, England",
+                                                  "${widget.finished['place']}",
                                                   textAlign: TextAlign.start,
                                                   style: TextStyle(
                                                       color: Colors.grey,
@@ -178,7 +181,7 @@ class _FinishedTripCardState extends State<FinishedTripCard> {
                                                     color: Colors.black87,
                                                     size: 14),
                                                 Text(
-                                                  "220",
+                                                  "${widget.finished['price']}",
                                                   textAlign: TextAlign.start,
                                                   style: TextStyle(
                                                       color: Colors.black87,

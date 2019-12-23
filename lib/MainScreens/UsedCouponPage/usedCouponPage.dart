@@ -10,6 +10,16 @@ class UsedCouponPage extends StatefulWidget {
 }
 
 class _UsedCouponPageState extends State<UsedCouponPage> {
+  List usedfList = [
+    {
+      "disc": "35",
+      "ocassion": "Holiday",
+      "hotel": "Paradise Hotel & Spa",
+      "date": "Sep 23, 2019",
+      "code": "C_Roome - 2019",
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,7 +33,7 @@ class _UsedCouponPageState extends State<UsedCouponPage> {
                 child: Row(
                   children: <Widget>[
                     Text(
-                      "2",
+                      "${usedfList.length}",
                       textAlign: TextAlign.start,
                       style: TextStyle(
                           color: Colors.black,
@@ -44,8 +54,8 @@ class _UsedCouponPageState extends State<UsedCouponPage> {
           SliverList(
             delegate:
                 SliverChildBuilderDelegate((BuildContext context, int index) {
-              return UsedCouponCard();
-            }, childCount: 2),
+              return UsedCouponCard(usedfList[index]);
+            }, childCount: usedfList.length),
           )
         ],
       ),

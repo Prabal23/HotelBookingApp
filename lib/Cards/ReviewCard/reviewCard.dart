@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import '../../main.dart';
 
 class ReviewCard extends StatefulWidget {
+  final roomDetails;
+
+  ReviewCard(this.roomDetails);
   @override
   _ReviewCardState createState() => _ReviewCardState();
 }
@@ -29,7 +32,7 @@ class _ReviewCardState extends State<ReviewCard> {
                             radius: 25.0,
                             backgroundColor: Colors.white,
                             backgroundImage:
-                                AssetImage('assets/images/man.png'),
+                                AssetImage('${widget.roomDetails['image']}'),
                           ),
                           decoration: new BoxDecoration(
                             color: Colors.grey[200], // border color
@@ -51,7 +54,7 @@ class _ReviewCardState extends State<ReviewCard> {
                             children: <Widget>[
                               Container(
                                 child: Text(
-                                  "John Smith",
+                                  "${widget.roomDetails['name']}",
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
                                       color: Colors.black,
@@ -66,7 +69,7 @@ class _ReviewCardState extends State<ReviewCard> {
                                 children: <Widget>[
                                   Container(
                                     child: Text(
-                                      "Aug 29, 2019",
+                                      "${widget.roomDetails['date']}",
                                       textAlign: TextAlign.start,
                                       style: TextStyle(
                                           color: Colors.black45,
@@ -118,9 +121,10 @@ class _ReviewCardState extends State<ReviewCard> {
               ],
             ),
             Container(
+              alignment: Alignment.centerLeft,
               margin: EdgeInsets.only(top: 10),
               child: Text(
-                "I am very happy with the hotel service. Very tasty foods, beautiful locations, pool water was clean. The people working there was very warm and friendly. Overall the hotel is very good. I recommend everyone to visit there.",
+                "${widget.roomDetails['desc']}",
                 textAlign: TextAlign.justify,
                 style: TextStyle(
                     color: Colors.black54,

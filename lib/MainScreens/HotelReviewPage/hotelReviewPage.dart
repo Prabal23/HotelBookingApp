@@ -11,6 +11,35 @@ class HotelReviewPage extends StatefulWidget {
 }
 
 class _HotelReviewPageState extends State<HotelReviewPage> {
+  List roomDetails = [
+    {
+      "image": "assets/images/man.png",
+      "name": "Jason",
+      "date": "Aug 24, 2019",
+      "desc": "Nice environment, great service and tasty foods",
+    },
+    {
+      "image": "assets/images/man2.jpg",
+      "name": "Micheal",
+      "date": "Aug 28, 2019",
+      "desc": "Room was clean, service was up to the mark. Overall fantastic!",
+    },
+    {
+      "image": "assets/images/man2.png",
+      "name": "David",
+      "date": "Sep 6, 2019",
+      "desc":
+          "At first I want to say that the food were super tasty. Then I would mention the service and behavior of the employees towards customers. They always had smiles on their face and ready to serve.",
+    },
+    {
+      "image": "assets/images/man3.png",
+      "name": "Smith",
+      "date": "Oct 18, 2019",
+      "desc":
+          "Beautiful rooms, great foods, employees were nice and very caring",
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -304,7 +333,7 @@ class _HotelReviewPageState extends State<HotelReviewPage> {
                                     fontFamily: 'Oswald'),
                               ),
                               Text(
-                                "(20)",
+                                "(${roomDetails.length})",
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
                                     color: Colors.black,
@@ -343,9 +372,9 @@ class _HotelReviewPageState extends State<HotelReviewPage> {
             sliver: SliverList(
               delegate: SliverChildBuilderDelegate(
                 (BuildContext context, int index) {
-                  return ReviewCard();
+                  return ReviewCard(roomDetails[index]);
                 },
-                childCount: 6,
+                childCount: roomDetails.length,
               ),
             ),
           )

@@ -10,6 +10,36 @@ class HotelRoomPage extends StatefulWidget {
 }
 
 class _HotelRoomPageState extends State<HotelRoomPage> {
+  List roomDetails = [
+    {
+      "image": "assets/images/premium.jpeg",
+      "name": "Premium Room",
+      "oldPrice": 245,
+      "newPrice": 240.9,
+      "discount": 18,
+    },
+    {
+      "image": "assets/images/deluxe.jpg",
+      "name": "Deluxe Room",
+      "oldPrice": 230,
+      "newPrice": 212.5,
+      "discount": 15,
+    },
+    {
+      "image": "assets/images/super.jpg",
+      "name": "Hotel Sunshine",
+      "oldPrice": 240,
+      "newPrice": 0,
+      "discount": 0,
+    },
+    {
+      "image": "assets/images/suite.jpg",
+      "name": "Hotel Moonlight",
+      "oldPrice": 230,
+      "newPrice": 0,
+      "discount": 0,
+    },
+  ];
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -37,8 +67,8 @@ class _HotelRoomPageState extends State<HotelRoomPage> {
           SliverList(
             delegate:
                 SliverChildBuilderDelegate((BuildContext context, int index) {
-              return RoomsCard();
-            }, childCount: 2),
+              return RoomsCard(roomDetails[index]);
+            }, childCount: roomDetails.length),
           )
         ],
       ),

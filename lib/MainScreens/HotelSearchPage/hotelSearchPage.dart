@@ -191,6 +191,37 @@ class HotelSearchPageState extends State<HotelSearchPage> {
     "Dec"
   ];
 
+  List bestDeals = [
+    {
+      "image": "assets/images/h2.jpg",
+      "name": "Paradise Hotel & Spa",
+      "place": "Paris",
+      "rating": 4.5,
+      "price": 250,
+    },
+    {
+      "image": "assets/images/h2.jpg",
+      "name": "Queens Hotel",
+      "place": "London",
+      "rating": 4.0,
+      "price": 245,
+    },
+    {
+      "image": "assets/images/h3.jpg",
+      "name": "Hotel Sunshine",
+      "place": "Bangkok",
+      "rating": 3.5,
+      "price": 230,
+    },
+    {
+      "image": "assets/images/h4.jpg",
+      "name": "Hotel Moonlight",
+      "place": "Russia",
+      "rating": 3.0,
+      "price": 220,
+    },
+  ];
+
   List<DropdownMenuItem<String>> _dropDownDayItems,
       _dropDownDayItems330,
       _dropDownDayItemsLeapp,
@@ -716,7 +747,7 @@ class HotelSearchPageState extends State<HotelSearchPage> {
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[
                                 Text(
-                                  "85 hotels found",
+                                  "${bestDeals.length} hotels found",
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
                                       color: Colors.black45,
@@ -762,17 +793,23 @@ class HotelSearchPageState extends State<HotelSearchPage> {
                         Container(
                           margin: EdgeInsets.only(top: 15),
                           width: MediaQuery.of(context).size.width,
-                          height: 230,
+                          //height: 230,
                           child: Container(
-                            child: MediaQuery.removePadding(
-                              context: context,
-                              removeTop: true,
-                              child: new ListView.builder(
-                                itemBuilder:
-                                    (BuildContext context, int index) =>
-                                        HomeBestDealsCard(),
-                                itemCount: 2,
-                              ),
+                            // child: MediaQuery.removePadding(
+                            //   context: context,
+                            //   removeTop: true,
+                            //   child: new ListView.builder(
+                            //     itemBuilder:
+                            //         (BuildContext context, int index) =>
+                            //             HomeBestDealsCard(),
+                            //     itemCount: 2,
+                            //   ),
+                            // ),
+                            child: Column(
+                              children:
+                                  List.generate(bestDeals.length, (index) {
+                                return HomeBestDealsCard(bestDeals[index]);
+                              }),
                             ),
                           ),
                         ),

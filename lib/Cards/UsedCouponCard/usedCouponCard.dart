@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class UsedCouponCard extends StatefulWidget {
+  final usedfList;
+  UsedCouponCard(this.usedfList);
   @override
   _UsedCouponCardState createState() => _UsedCouponCardState();
 }
@@ -58,7 +60,7 @@ class _UsedCouponCardState extends State<UsedCouponCard> {
                                         children: <Widget>[
                                           Container(
                                             child: Text(
-                                              "35%",
+                                              "${widget.usedfList['disc']}%",
                                               maxLines: 1,
                                               overflow: TextOverflow.ellipsis,
                                               style: TextStyle(
@@ -106,7 +108,7 @@ class _UsedCouponCardState extends State<UsedCouponCard> {
                                                     margin: EdgeInsets.only(
                                                         left: 3),
                                                     child: Text(
-                                                      "Grand Sultan Tea Resort and Golf",
+                                                      "${widget.usedfList['hotel']}",
                                                       textAlign:
                                                           TextAlign.start,
                                                       maxLines: 1,
@@ -128,39 +130,39 @@ class _UsedCouponCardState extends State<UsedCouponCard> {
                                     ),
                                   ),
                                   Container(
-                                        margin: EdgeInsets.only(
-                                            left: 0, right: 0, top: 3),
-                                        decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(15))),
-                                        child: Container(
-                                          margin: EdgeInsets.only(top: 0),
-                                          child: Row(
-                                            children: <Widget>[
-                                              Container(
-                                                margin: EdgeInsets.only(left: 1.5),
-                                                child: Icon(
-                                                  Icons.timer,
-                                                  color: Colors.grey[500],
-                                                  size: 14,
-                                                ),
+                                      margin: EdgeInsets.only(
+                                          left: 0, right: 0, top: 3),
+                                      decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius: BorderRadius.all(
+                                              Radius.circular(15))),
+                                      child: Container(
+                                        margin: EdgeInsets.only(top: 0),
+                                        child: Row(
+                                          children: <Widget>[
+                                            Container(
+                                              margin:
+                                                  EdgeInsets.only(left: 1.5),
+                                              child: Icon(
+                                                Icons.timer,
+                                                color: Colors.grey[500],
+                                                size: 14,
                                               ),
-                                              Container(
-                                                margin:
-                                                    EdgeInsets.only(left: 5),
-                                                child: Text(
-                                                  "Sep 21, 2019",
-                                                  style: TextStyle(
-                                                      color: Colors.grey[400],
-                                                      fontSize: 11,
-                                                      fontFamily: 'Oswald'),
-                                                  textAlign: TextAlign.center,
-                                                ),
+                                            ),
+                                            Container(
+                                              margin: EdgeInsets.only(left: 5),
+                                              child: Text(
+                                                "${widget.usedfList['date']}",
+                                                style: TextStyle(
+                                                    color: Colors.grey[400],
+                                                    fontSize: 11,
+                                                    fontFamily: 'Oswald'),
+                                                textAlign: TextAlign.center,
                                               ),
-                                            ],
-                                          ),
-                                        )),
+                                            ),
+                                          ],
+                                        ),
+                                      )),
                                 ],
                               ),
                             ),
@@ -177,7 +179,7 @@ class _UsedCouponCardState extends State<UsedCouponCard> {
                                   child: Row(
                                     children: <Widget>[
                                       Text(
-                                        "# C_ROOME - 123456",
+                                        "# ${widget.usedfList['code']}",
                                         style: TextStyle(
                                             color: Colors.grey[500],
                                             fontSize: 12,

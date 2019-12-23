@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:roome/MainScreens/HotelSearchPage/hotelSearchPage.dart';
 
 class HomePopularCard extends StatefulWidget {
+  final popularPlaces;
+  HomePopularCard(this.popularPlaces);
   @override
   _HomePopularCardState createState() => _HomePopularCardState();
 }
@@ -14,7 +16,16 @@ class _HomePopularCardState extends State<HomePopularCard> {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => HotelSearchPage("Russia", "", "", "", "", 0, 0, 0)),
+            MaterialPageRoute(
+                builder: (context) => HotelSearchPage(
+                    "${widget.popularPlaces['name']}",
+                    "",
+                    "",
+                    "",
+                    "",
+                    0,
+                    0,
+                    0)),
           );
         },
         child: new Container(
@@ -24,7 +35,7 @@ class _HomePopularCardState extends State<HomePopularCard> {
           width: 200,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("assets/images/russia.jpg"),
+              image: AssetImage("${widget.popularPlaces['image']}"),
               fit: BoxFit.cover,
             ),
             borderRadius: BorderRadius.all(Radius.circular(15.0)),
@@ -51,7 +62,7 @@ class _HomePopularCardState extends State<HomePopularCard> {
                   alignment: Alignment.bottomLeft,
                   margin: EdgeInsets.only(top: 10, left: 10, bottom: 10),
                   child: Text(
-                    "Russia",
+                    "${widget.popularPlaces['name']}",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,

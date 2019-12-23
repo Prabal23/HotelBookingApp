@@ -10,6 +10,93 @@ class RecentSearchPage extends StatefulWidget {
 }
 
 class _RecentSearchPageState extends State<RecentSearchPage> {
+  List searchList = [
+    {
+      "image": "assets/images/bd.jpg",
+      "name": "Bangladesh",
+      "date": "Sep 1 - Sep 5",
+      "person": "1 Room - 2 Persons",
+      "num": 2,
+      "stMon": "Sep",
+      "endMon": "Sep",
+      "stDate": "1",
+      "endDate": "5",
+      "room": 1,
+      "adult": 2,
+      "children": 0,
+    },
+    {
+      "image": "assets/images/l2.jpg",
+      "name": "London",
+      "date": "Sep 10 - Sep 15",
+      "person": "2 Rooms - 3 Persons",
+      "num": 3,
+      "stMon": "Sep",
+      "endMon": "Sep",
+      "stDate": "10",
+      "endDate": "15",
+      "room": 2,
+      "adult": 2,
+      "children": 1,
+    },
+    {
+      "image": "assets/images/thailand.jpg",
+      "name": "Bangkok",
+      "date": "Sep 25 - Sep 30",
+      "person": "2 Rooms - 2 Persons",
+      "num": 4,
+      "stMon": "Sep",
+      "endMon": "Sep",
+      "stDate": "25",
+      "endDate": "30",
+      "room": 2,
+      "adult": 2,
+      "children": 0,
+    },
+    {
+      "image": "assets/images/japan.jpg",
+      "name": "Japan",
+      "date": "Oct 5 - Oct 10",
+      "person": "1 Room - 2 Persons",
+      "num": 2,
+      "stMon": "Oct",
+      "endMon": "Oct",
+      "stDate": "5",
+      "endDate": "10",
+      "room": 1,
+      "adult": 2,
+      "children": 0,
+    },
+    {
+      "image": "assets/images/capetown.jpg",
+      "name": "Capetown",
+      "date": "Oct 15 - Oct 20",
+      "person": "2 Rooms - 4 Persons",
+      "num": 3,
+      "stMon": "Oct",
+      "endMon": "Oct",
+      "stDate": "15",
+      "endDate": "20",
+      "room": 2,
+      "adult": 2,
+      "children": 2,
+    },
+    {
+      "image": "assets/images/russia.jpg",
+      "name": "Russia",
+      "date": "Oct 25 - Oct 31",
+      "person": "2 Rooms - 5 Persons",
+      "num": 4,
+      "stMon": "Oct",
+      "endMon": "Oct",
+      "stDate": "25",
+      "endDate": "31",
+      "room": 2,
+      "adult": 2,
+      "children": 3,
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -132,15 +219,22 @@ class _RecentSearchPageState extends State<RecentSearchPage> {
                               fontSize: 16,
                               fontFamily: 'Oswald'),
                         ),
-                        Container(
-                          child: Text(
-                            "Clear All",
-                            textAlign: TextAlign.start,
-                            style: TextStyle(
-                                color: header,
-                                fontSize: 13,
-                                fontFamily: 'Oswald',
-                                fontWeight: FontWeight.w400),
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              searchList = [];
+                            });
+                          },
+                          child: Container(
+                            child: Text(
+                              "Clear All",
+                              textAlign: TextAlign.start,
+                              style: TextStyle(
+                                  color: header,
+                                  fontSize: 13,
+                                  fontFamily: 'Oswald',
+                                  fontWeight: FontWeight.w400),
+                            ),
                           ),
                         ),
                       ],
@@ -153,8 +247,8 @@ class _RecentSearchPageState extends State<RecentSearchPage> {
             sliver: SliverList(
               delegate:
                   SliverChildBuilderDelegate((BuildContext context, int index) {
-                return InsideSearchcard();
-              }, childCount: 6),
+                return InsideSearchcard(searchList[index]);
+              }, childCount: searchList.length),
             ),
           )
         ],

@@ -69,7 +69,7 @@ class _HotelAboutPageState extends State<HotelAboutPage> {
                                 margin:
                                     EdgeInsets.only(top: 5, left: 0, bottom: 0),
                                 child: Text(
-                                  "Grand Sultan Tea Resort and Golf",
+                                  "Paradise Hotel & Spa",
                                   maxLines: 2,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
@@ -102,7 +102,7 @@ class _HotelAboutPageState extends State<HotelAboutPage> {
                                           children: <Widget>[
                                             Expanded(
                                               child: Text(
-                                                "Sreemongol, Sylhet",
+                                                "Paris",
                                                 textAlign: TextAlign.start,
                                                 style: TextStyle(
                                                     color: Colors.black54,
@@ -123,7 +123,7 @@ class _HotelAboutPageState extends State<HotelAboutPage> {
                                           Icon(Icons.attach_money,
                                               color: Colors.black87, size: 14),
                                           Text(
-                                            "220",
+                                            "250",
                                             textAlign: TextAlign.start,
                                             style: TextStyle(
                                                 color: Colors.black87,

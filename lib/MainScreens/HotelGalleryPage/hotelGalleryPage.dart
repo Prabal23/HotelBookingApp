@@ -7,6 +7,13 @@ class HotelGalleryPage extends StatefulWidget {
 }
 
 class _HotelGalleryPageState extends State<HotelGalleryPage> {
+  List images = [
+    "assets/images/premium.jpeg",
+    "assets/images/deluxe.jpg",
+    "assets/images/super.jpg",
+    "assets/images/suite.jpg",
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -37,9 +44,9 @@ class _HotelGalleryPageState extends State<HotelGalleryPage> {
               child: SliverGrid(
                 delegate: SliverChildBuilderDelegate(
                   (BuildContext context, int index) {
-                    return GalleryCard();
+                    return GalleryCard(images[index]);
                   },
-                  childCount: 6,
+                  childCount: images.length,
                 ),
                 gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                   maxCrossAxisExtent: 190.0,

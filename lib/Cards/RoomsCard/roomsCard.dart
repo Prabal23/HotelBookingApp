@@ -4,6 +4,8 @@ import 'package:roome/MainScreens/RoomDetailsPage/roomDetailsPage.dart';
 import '../../main.dart';
 
 class RoomsCard extends StatefulWidget {
+  final roomDetails;
+  RoomsCard(this.roomDetails);
   @override
   _RoomsCardState createState() => _RoomsCardState();
 }
@@ -38,7 +40,7 @@ class _RoomsCardState extends State<RoomsCard> {
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/images/h2.jpg"),
+                    image: AssetImage("${widget.roomDetails['image']}"),
                     fit: BoxFit.cover,
                   ),
                   borderRadius: BorderRadius.only(
@@ -88,7 +90,7 @@ class _RoomsCardState extends State<RoomsCard> {
                                         child: Row(
                                           children: <Widget>[
                                             Text(
-                                              "Deluxe Room",
+                                              "${widget.roomDetails['name']}",
                                               maxLines: 1,
                                               overflow: TextOverflow.ellipsis,
                                               style: TextStyle(
@@ -119,14 +121,19 @@ class _RoomsCardState extends State<RoomsCard> {
                                                           size: 17),
                                                     ),
                                                     Text(
-                                                      "220",
+                                                      "${widget.roomDetails['oldPrice']}",
                                                       textAlign:
                                                           TextAlign.start,
                                                       style: TextStyle(
                                                           color: Colors.black54,
                                                           fontSize: 13,
-                                                          decoration:
-                                                              TextDecoration
+                                                          decoration: widget
+                                                                          .roomDetails[
+                                                                      'newPrice'] ==
+                                                                  0
+                                                              ? TextDecoration
+                                                                  .none
+                                                              : TextDecoration
                                                                   .lineThrough,
                                                           fontFamily: 'Oswald',
                                                           fontWeight:
@@ -147,8 +154,13 @@ class _RoomsCardState extends State<RoomsCard> {
                                                       style: TextStyle(
                                                           color: Colors.black45,
                                                           fontSize: 13,
-                                                          decoration:
-                                                              TextDecoration
+                                                          decoration: widget
+                                                                          .roomDetails[
+                                                                      'newPrice'] ==
+                                                                  0
+                                                              ? TextDecoration
+                                                                  .none
+                                                              : TextDecoration
                                                                   .lineThrough,
                                                           fontFamily: 'Oswald',
                                                           fontWeight:
@@ -159,79 +171,87 @@ class _RoomsCardState extends State<RoomsCard> {
                                               )
                                             ],
                                           ),
-                                          Container(
-                                            child: Row(
-                                              children: <Widget>[
-                                                Container(
-                                                  margin:
-                                                      EdgeInsets.only(right: 0),
+                                          widget.roomDetails['newPrice'] == 0
+                                              ? Container()
+                                              : Container(
                                                   child: Row(
                                                     children: <Widget>[
-                                                      Text(
-                                                        "153",
-                                                        textAlign:
-                                                            TextAlign.start,
-                                                        style: TextStyle(
-                                                            color:
-                                                                Colors.black54,
-                                                            fontSize: 13,
-                                                            fontFamily:
-                                                                'Oswald',
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .w400),
+                                                      Container(
+                                                        margin: EdgeInsets.only(
+                                                            right: 0),
+                                                        child: Row(
+                                                          children: <Widget>[
+                                                            Text(
+                                                              "${widget.roomDetails['newPrice']}",
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .start,
+                                                              style: TextStyle(
+                                                                  color: Colors
+                                                                      .black54,
+                                                                  fontSize: 13,
+                                                                  fontFamily:
+                                                                      'Oswald',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w400),
+                                                            ),
+                                                          ],
+                                                        ),
                                                       ),
+                                                      Container(
+                                                        margin: EdgeInsets.only(
+                                                            right: 15),
+                                                        child: Row(
+                                                          children: <Widget>[
+                                                            Text(
+                                                              "/per night",
+                                                              textAlign:
+                                                                  TextAlign
+                                                                      .start,
+                                                              style: TextStyle(
+                                                                  color: Colors
+                                                                      .black45,
+                                                                  fontSize: 13,
+                                                                  fontFamily:
+                                                                      'Oswald',
+                                                                  fontWeight:
+                                                                      FontWeight
+                                                                          .w300),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      )
                                                     ],
                                                   ),
                                                 ),
-                                                Container(
-                                                  margin: EdgeInsets.only(
-                                                      right: 15),
-                                                  child: Row(
-                                                    children: <Widget>[
-                                                      Text(
-                                                        "/per night",
-                                                        textAlign:
-                                                            TextAlign.start,
-                                                        style: TextStyle(
-                                                            color:
-                                                                Colors.black45,
-                                                            fontSize: 13,
-                                                            fontFamily:
-                                                                'Oswald',
-                                                            fontWeight:
-                                                                FontWeight
-                                                                    .w300),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                )
-                                              ],
-                                            ),
-                                          ),
                                         ],
                                       ),
                                     ),
                                   ],
                                 ),
                               ),
-                              Container(
-                                padding: EdgeInsets.only(
-                                    top: 5, bottom: 5, right: 6, left: 6),
-                                margin: EdgeInsets.only(right: 0, left: 3),
-                                decoration: BoxDecoration(
-                                    color: header,
-                                    borderRadius: BorderRadius.circular(15)),
-                                child: Text(
-                                  "15% Off",
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 11,
-                                      fontFamily: 'Oswald',
-                                      fontWeight: FontWeight.w400),
-                                ),
-                              ),
+                              widget.roomDetails['discount'] == 0
+                                  ? Container()
+                                  : Container(
+                                      padding: EdgeInsets.only(
+                                          top: 5, bottom: 5, right: 6, left: 6),
+                                      margin:
+                                          EdgeInsets.only(right: 0, left: 3),
+                                      decoration: BoxDecoration(
+                                          color: header,
+                                          borderRadius:
+                                              BorderRadius.circular(15)),
+                                      child: Text(
+                                        "${widget.roomDetails['discount']}% Off",
+                                        textAlign: TextAlign.start,
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 11,
+                                            fontFamily: 'Oswald',
+                                            fontWeight: FontWeight.w400),
+                                      ),
+                                    ),
                             ],
                           ),
                         ],

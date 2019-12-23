@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:roome/MainScreens/HotelSearchPage/hotelSearchPage.dart';
 
 class HomeSearchCard extends StatefulWidget {
+  final searchImages;
+
+  HomeSearchCard(this.searchImages);
   @override
   _HomeSearchCardState createState() => _HomeSearchCardState();
 }
@@ -14,7 +17,15 @@ class _HomeSearchCardState extends State<HomeSearchCard> {
         onTap: () {
           Navigator.push(
             context,
-            MaterialPageRoute(builder: (context) => HotelSearchPage("Bangladesh", "10", "Sep", "14", "Sep", 1, 2, 0)),
+            MaterialPageRoute(
+                builder: (context) => HotelSearchPage(
+                    "${widget.searchImages['name']}", "${widget.searchImages['stDate']}",
+                      "${widget.searchImages['stMon']}",
+                      "${widget.searchImages['endDate']}",
+                      "${widget.searchImages['endMon']}",
+                      widget.searchImages['room'],
+                      widget.searchImages['adult'],
+                      widget.searchImages['children'],)),
           );
         },
         child: Container(
@@ -38,7 +49,7 @@ class _HomeSearchCardState extends State<HomeSearchCard> {
                   width: 120,
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage("assets/images/bd.jpg"),
+                        image: AssetImage("${widget.searchImages['image']}"),
                         fit: BoxFit.cover,
                       ),
                       borderRadius: BorderRadius.only(
@@ -57,7 +68,7 @@ class _HomeSearchCardState extends State<HomeSearchCard> {
                         Container(
                             margin: EdgeInsets.only(top: 5, left: 0, bottom: 0),
                             child: Text(
-                              "Bangladesh",
+                              "${widget.searchImages['name']}",
                               style: TextStyle(
                                   color: Colors.black,
                                   fontSize: 15,
@@ -67,7 +78,7 @@ class _HomeSearchCardState extends State<HomeSearchCard> {
                         Container(
                             margin: EdgeInsets.only(top: 0, left: 0),
                             child: Text(
-                              "Sep 10 - Sep 14",
+                              "${widget.searchImages['date']}",
                               textAlign: TextAlign.start,
                               style: TextStyle(
                                   color: Colors.black87,
@@ -77,7 +88,7 @@ class _HomeSearchCardState extends State<HomeSearchCard> {
                         Container(
                             margin: EdgeInsets.only(top: 0, left: 0, bottom: 5),
                             child: Text(
-                              "1 Room - 2 Adults",
+                              "${widget.searchImages['person']}",
                               textAlign: TextAlign.start,
                               style: TextStyle(
                                   color: Colors.black87,

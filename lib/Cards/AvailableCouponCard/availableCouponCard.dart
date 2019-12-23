@@ -4,6 +4,8 @@ import 'package:roome/MainScreens/CouponDetails/couponDetails.dart';
 import '../../main.dart';
 
 class AvailableCouponCard extends StatefulWidget {
+  final availList;
+  AvailableCouponCard(this.availList);
   @override
   _AvailableCouponCardState createState() => _AvailableCouponCardState();
 }
@@ -68,7 +70,7 @@ class _AvailableCouponCardState extends State<AvailableCouponCard> {
                                           children: <Widget>[
                                             Container(
                                               child: Text(
-                                                "35%",
+                                                "${widget.availList['disc']}%",
                                                 maxLines: 1,
                                                 overflow: TextOverflow.ellipsis,
                                                 style: TextStyle(
@@ -118,7 +120,7 @@ class _AvailableCouponCardState extends State<AvailableCouponCard> {
                                                       margin: EdgeInsets.only(
                                                           left: 3),
                                                       child: Text(
-                                                        "Grand Sultan Tea Resort and Golf",
+                                                        "${widget.availList['hotel']}",
                                                         textAlign:
                                                             TextAlign.start,
                                                         maxLines: 1,
@@ -153,7 +155,8 @@ class _AvailableCouponCardState extends State<AvailableCouponCard> {
                                           child: Row(
                                             children: <Widget>[
                                               Container(
-                                                margin: EdgeInsets.only(left: 1.5),
+                                                margin:
+                                                    EdgeInsets.only(left: 1.5),
                                                 child: Icon(
                                                   Icons.timer,
                                                   color: header,
@@ -164,7 +167,7 @@ class _AvailableCouponCardState extends State<AvailableCouponCard> {
                                                 margin:
                                                     EdgeInsets.only(left: 5),
                                                 child: Text(
-                                                  "Sep 21, 2019",
+                                                  "${widget.availList['date']}",
                                                   style: TextStyle(
                                                       color: Colors.grey[400],
                                                       fontSize: 11,
@@ -191,7 +194,7 @@ class _AvailableCouponCardState extends State<AvailableCouponCard> {
                                     child: Row(
                                       children: <Widget>[
                                         Text(
-                                          "# C_ROOME - 123456",
+                                          "# ${widget.availList['code']}",
                                           style: TextStyle(
                                               color: header,
                                               fontSize: 12,

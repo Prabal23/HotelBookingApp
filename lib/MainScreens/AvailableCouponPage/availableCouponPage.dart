@@ -10,6 +10,23 @@ class AvailableCouponPage extends StatefulWidget {
 }
 
 class _AvailableCouponPageState extends State<AvailableCouponPage> {
+  List availList = [
+    {
+      "disc": "20",
+      "ocassion": "Christmas",
+      "hotel": "Queens Hotel",
+      "date": "Oct 3, 2019",
+      "code": "C_Christmas - 2019",
+    },
+    {
+      "disc": "25",
+      "ocassion": "New Year",
+      "hotel": "Hotel Moonlight",
+      "date": "Jan 23, 2019",
+      "code": "C_NewYear - 2020",
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,7 +40,7 @@ class _AvailableCouponPageState extends State<AvailableCouponPage> {
                 child: Row(
                   children: <Widget>[
                     Text(
-                      "2",
+                      "${availList.length}",
                       textAlign: TextAlign.start,
                       style: TextStyle(
                           color: Colors.black,
@@ -44,8 +61,8 @@ class _AvailableCouponPageState extends State<AvailableCouponPage> {
           SliverList(
             delegate:
                 SliverChildBuilderDelegate((BuildContext context, int index) {
-              return AvailableCouponCard();
-            }, childCount: 2),
+              return AvailableCouponCard(availList[index]);
+            }, childCount: availList.length),
           )
         ],
       ),

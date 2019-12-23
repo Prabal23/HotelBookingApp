@@ -217,26 +217,31 @@ class _ProfileEditFormState extends State<ProfileEditForm> {
                           (BuildContext context, AsyncSnapshot<File> snapshot) {
                         if (snapshot.connectionState == ConnectionState.done &&
                             snapshot.data != null) {
-                          return Center(
-                            child: Container(
-                              margin: EdgeInsets.only(right: 0, top: 0),
-                              //transform: Matrix4.translationValues(0.0, 0.0, 0.0),
-                              padding: EdgeInsets.all(1.0),
-                              child: CircleAvatar(
-                                radius: 50.0,
-                                backgroundColor: Colors.white,
-                                backgroundImage: FileImage(snapshot.data),
-                              ),
-                              decoration: new BoxDecoration(
-                                color: Colors.grey[200], // border color
-                                shape: BoxShape.circle,
-                                boxShadow: [
-                                  BoxShadow(
-                                    blurRadius: 3.0,
-                                    color: Colors.black.withOpacity(.2),
-                                    //offset: Offset(6.0, 7.0),
-                                  ),
-                                ],
+                          return GestureDetector(
+                            onTap: () {
+                              pickImagefromGallery(ImageSource.gallery);
+                            },
+                            child: Center(
+                              child: Container(
+                                margin: EdgeInsets.only(right: 0, top: 0),
+                                //transform: Matrix4.translationValues(0.0, 0.0, 0.0),
+                                padding: EdgeInsets.all(1.0),
+                                child: CircleAvatar(
+                                  radius: 50.0,
+                                  backgroundColor: Colors.white,
+                                  backgroundImage: FileImage(snapshot.data),
+                                ),
+                                decoration: new BoxDecoration(
+                                  color: Colors.grey[200], // border color
+                                  shape: BoxShape.circle,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      blurRadius: 3.0,
+                                      color: Colors.black.withOpacity(.2),
+                                      //offset: Offset(6.0, 7.0),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           );
@@ -246,27 +251,32 @@ class _ProfileEditFormState extends State<ProfileEditForm> {
                             textAlign: TextAlign.center,
                           );
                         } else {
-                          return Center(
-                            child: Container(
-                              margin: EdgeInsets.only(right: 0, top: 0),
-                              //transform: Matrix4.translationValues(0.0, 0.0, 0.0),
-                              padding: EdgeInsets.all(1.0),
-                              child: CircleAvatar(
-                                radius: 50.0,
-                                backgroundColor: Colors.white,
-                                backgroundImage:
-                                    AssetImage('assets/images/man.png'),
-                              ),
-                              decoration: new BoxDecoration(
-                                color: Colors.grey[200], // border color
-                                shape: BoxShape.circle,
-                                boxShadow: [
-                                  BoxShadow(
-                                    blurRadius: 3.0,
-                                    color: Colors.black.withOpacity(.2),
-                                    //offset: Offset(6.0, 7.0),
-                                  ),
-                                ],
+                          return GestureDetector(
+                            onTap: () {
+                              pickImagefromGallery(ImageSource.gallery);
+                            },
+                            child: Center(
+                              child: Container(
+                                margin: EdgeInsets.only(right: 0, top: 0),
+                                //transform: Matrix4.translationValues(0.0, 0.0, 0.0),
+                                padding: EdgeInsets.all(1.0),
+                                child: CircleAvatar(
+                                  radius: 50.0,
+                                  backgroundColor: Colors.white,
+                                  backgroundImage:
+                                      AssetImage('assets/images/man.png'),
+                                ),
+                                decoration: new BoxDecoration(
+                                  color: Colors.grey[200], // border color
+                                  shape: BoxShape.circle,
+                                  boxShadow: [
+                                    BoxShadow(
+                                      blurRadius: 3.0,
+                                      color: Colors.black.withOpacity(.2),
+                                      //offset: Offset(6.0, 7.0),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           );

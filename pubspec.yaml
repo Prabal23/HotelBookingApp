@@ -49,8 +49,9 @@ flutter:
   assets:
     - assets/images/bangladesh.jpg
     - assets/images/bd.jpg
-    - assets/images/p3.jpg
+    - assets/images/p1.jpg
     - assets/images/p2.jpg
+    - assets/images/p3.jpg
     - assets/images/p4.jpg
     - assets/images/p5.jpg
     - assets/images/no_net.jpg
@@ -72,6 +73,10 @@ flutter:
     - assets/images/h3.jpg
     - assets/images/h4.jpg
     - assets/images/man.png
+    - assets/images/man1.png
+    - assets/images/man2.jpg
+    - assets/images/man2.png
+    - assets/images/man3.png
     - assets/images/refer.jpg
     - assets/images/qrcode.png
     - assets/images/coupons.jpg
@@ -81,6 +86,10 @@ flutter:
     - assets/images/avatar.png
     - assets/images/user.png
     - assets/images/no_net.png
+    - assets/images/deluxe.jpg
+    - assets/images/premium.jpeg
+    - assets/images/super.jpg
+    - assets/images/suite.jpg
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

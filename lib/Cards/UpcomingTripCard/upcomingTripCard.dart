@@ -4,6 +4,9 @@ import 'package:roome/MainScreens/HotelDetails/hotelDetails.dart';
 import '../../main.dart';
 
 class UpcomingTripCard extends StatefulWidget {
+  final upcoming;
+
+  UpcomingTripCard(this.upcoming);
   @override
   _UpcomingTripCardState createState() => _UpcomingTripCardState();
 }
@@ -26,7 +29,7 @@ class _UpcomingTripCardState extends State<UpcomingTripCard> {
                 child: Row(
                   children: <Widget>[
                     Text(
-                      "12 Aug - 20 Aug",
+                      "${widget.upcoming['date']}",
                       textAlign: TextAlign.start,
                       style: TextStyle(
                           color: Colors.black87,
@@ -44,7 +47,7 @@ class _UpcomingTripCardState extends State<UpcomingTripCard> {
                           fontWeight: FontWeight.w300),
                     ),
                     Text(
-                      "2 Rooms - 5 Persons",
+                      "${widget.upcoming['person']}",
                       textAlign: TextAlign.start,
                       style: TextStyle(
                           color: Colors.black87,
@@ -77,7 +80,7 @@ class _UpcomingTripCardState extends State<UpcomingTripCard> {
                       width: 100,
                       decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage("assets/images/h4.jpg"),
+                          image: AssetImage("${widget.upcoming['image']}"),
                           fit: BoxFit.cover,
                         ),
                         borderRadius: BorderRadius.only(
@@ -114,7 +117,7 @@ class _UpcomingTripCardState extends State<UpcomingTripCard> {
                                       margin: EdgeInsets.only(
                                           top: 5, left: 0, bottom: 0),
                                       child: Text(
-                                        "Queens Hotel",
+                                        "${widget.upcoming['name']}",
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
@@ -141,7 +144,7 @@ class _UpcomingTripCardState extends State<UpcomingTripCard> {
                                             child: Row(
                                               children: <Widget>[
                                                 Text(
-                                                  "Leistershire, England",
+                                                  "${widget.upcoming['place']}",
                                                   textAlign: TextAlign.start,
                                                   style: TextStyle(
                                                       color: Colors.grey,
@@ -161,7 +164,7 @@ class _UpcomingTripCardState extends State<UpcomingTripCard> {
                                                     color: Colors.black87,
                                                     size: 14),
                                                 Text(
-                                                  "220",
+                                                  "${widget.upcoming['price']}",
                                                   textAlign: TextAlign.start,
                                                   style: TextStyle(
                                                       color: Colors.black87,

@@ -10,6 +10,27 @@ class FinishedTripPage extends StatefulWidget {
 }
 
 class _FinishedTripPageState extends State<FinishedTripPage> {
+  List finished = [
+    {
+      "image": "assets/images/h1.jpg",
+      "name": "Hotel Sunshine",
+      "place": "Bangkok",
+      "rating": 3.5,
+      "price": 230,
+      "date": "Jun 15 - Jun 20",
+      "person": "2 Rooms - 3 Persons",
+    },
+    {
+      "image": "assets/images/h4.jpg",
+      "name": "Hotel Moonlight",
+      "place": "Russia",
+      "rating": 3.0,
+      "price": 220,
+      "date": "Jul 25 - Jul 31",
+      "person": "1 Room - 1 Person",
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -19,8 +40,9 @@ class _FinishedTripPageState extends State<FinishedTripPage> {
           context: context,
           removeTop: true,
           child: ListView.builder(
-            itemCount: 2,
-            itemBuilder: (BuildContext context, int index) => FinishedTripCard(),
+            itemCount: finished.length,
+            itemBuilder: (BuildContext context, int index) =>
+                FinishedTripCard(finished[index]),
           ),
         ),
       ),

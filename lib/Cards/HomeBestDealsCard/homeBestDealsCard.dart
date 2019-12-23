@@ -4,6 +4,8 @@ import 'package:roome/MainScreens/HotelDetails/hotelDetails.dart';
 import '../../main.dart';
 
 class HomeBestDealsCard extends StatefulWidget {
+  final bestDeals;
+  HomeBestDealsCard(this.bestDeals);
   @override
   _HomeBestDealsCardState createState() => _HomeBestDealsCardState();
 }
@@ -40,7 +42,7 @@ class _HomeBestDealsCardState extends State<HomeBestDealsCard> {
                 width: 100,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/images/h4.jpg"),
+                    image: AssetImage("${widget.bestDeals['image']}"),
                     fit: BoxFit.cover,
                   ),
                   borderRadius: BorderRadius.only(
@@ -77,7 +79,7 @@ class _HomeBestDealsCardState extends State<HomeBestDealsCard> {
                                 margin:
                                     EdgeInsets.only(top: 5, left: 0, bottom: 0),
                                 child: Text(
-                                  "Queens Hotel",
+                                  "${widget.bestDeals['name']}",
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
@@ -104,7 +106,7 @@ class _HomeBestDealsCardState extends State<HomeBestDealsCard> {
                                       child: Row(
                                         children: <Widget>[
                                           Text(
-                                            "Leistershire, England",
+                                            "${widget.bestDeals['place']}",
                                             textAlign: TextAlign.start,
                                             style: TextStyle(
                                                 color: Colors.grey,
@@ -122,7 +124,7 @@ class _HomeBestDealsCardState extends State<HomeBestDealsCard> {
                                           Icon(Icons.attach_money,
                                               color: Colors.black87, size: 14),
                                           Text(
-                                            "220",
+                                            "${widget.bestDeals['price']}",
                                             textAlign: TextAlign.start,
                                             style: TextStyle(
                                                 color: Colors.black87,

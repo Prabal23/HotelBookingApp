@@ -182,6 +182,155 @@ class ExplorePageState extends State<ExplorePage> {
     "Dec"
   ];
 
+  List searchImages = [
+    {
+      "image": "assets/images/bd.jpg",
+      "name": "Bangladesh",
+      "date": "Sep 1 - Sep 5",
+      "person": "1 Room - 2 Persons",
+      "num": 2,
+      "stMon": "Sep",
+      "endMon": "Sep",
+      "stDate": "1",
+      "endDate": "5",
+      "room": 1,
+      "adult": 2,
+      "children": 0,
+    },
+    {
+      "image": "assets/images/l2.jpg",
+      "name": "London",
+      "date": "Sep 10 - Sep 15",
+      "person": "2 Rooms - 3 Persons",
+      "num": 3,
+      "stMon": "Sep",
+      "endMon": "Sep",
+      "stDate": "10",
+      "endDate": "15",
+      "room": 2,
+      "adult": 2,
+      "children": 1,
+    },
+    {
+      "image": "assets/images/thailand.jpg",
+      "name": "Bangkok",
+      "date": "Sep 25 - Sep 30",
+      "person": "2 Rooms - 2 Persons",
+      "num": 4,
+      "stMon": "Sep",
+      "endMon": "Sep",
+      "stDate": "25",
+      "endDate": "30",
+      "room": 2,
+      "adult": 2,
+      "children": 0,
+    },
+    {
+      "image": "assets/images/japan.jpg",
+      "name": "Japan",
+      "date": "Oct 5 - Oct 10",
+      "person": "1 Room - 2 Persons",
+      "num": 2,
+      "stMon": "Oct",
+      "endMon": "Oct",
+      "stDate": "5",
+      "endDate": "10",
+      "room": 1,
+      "adult": 2,
+      "children": 0,
+    },
+    {
+      "image": "assets/images/capetown.jpg",
+      "name": "Capetown",
+      "date": "Oct 15 - Oct 20",
+      "person": "2 Rooms - 4 Persons",
+      "num": 3,
+      "stMon": "Oct",
+      "endMon": "Oct",
+      "stDate": "15",
+      "endDate": "20",
+      "room": 2,
+      "adult": 2,
+      "children": 2,
+    },
+    {
+      "image": "assets/images/russia.jpg",
+      "name": "Russia",
+      "date": "Oct 25 - Oct 31",
+      "person": "2 Rooms - 5 Persons",
+      "num": 4,
+      "stMon": "Oct",
+      "endMon": "Oct",
+      "stDate": "25",
+      "endDate": "31",
+      "room": 2,
+      "adult": 2,
+      "children": 3,
+    },
+  ];
+
+  List popularPlaces = [
+    {
+      "image": "assets/images/p1.jpg",
+      "name": "Paris",
+    },
+    {
+      "image": "assets/images/russia.jpg",
+      "name": "Russia",
+    },
+    {
+      "image": "assets/images/capetown.jpg",
+      "name": "Capetown",
+    },
+    {
+      "image": "assets/images/japan.jpg",
+      "name": "Japan",
+    },
+    {
+      "image": "assets/images/thailand.jpg",
+      "name": "Bangkok",
+    },
+    {
+      "image": "assets/images/l2.jpg",
+      "name": "London",
+    },
+    {
+      "image": "assets/images/bd.jpg",
+      "name": "Bangladesh",
+    },
+  ];
+
+  List bestDeals = [
+    {
+      "image": "assets/images/h1.jpg",
+      "name": "Paradise Hotel & Spa",
+      "place": "Paris",
+      "rating": 4.5,
+      "price": 250,
+    },
+    {
+      "image": "assets/images/h2.jpg",
+      "name": "Queens Hotel",
+      "place": "London",
+      "rating": 4.0,
+      "price": 245,
+    },
+    {
+      "image": "assets/images/h3.jpg",
+      "name": "Hotel Sunshine",
+      "place": "Bangkok",
+      "rating": 3.5,
+      "price": 230,
+    },
+    {
+      "image": "assets/images/h4.jpg",
+      "name": "Hotel Moonlight",
+      "place": "Russia",
+      "rating": 3.0,
+      "price": 220,
+    },
+  ];
+
   TextEditingController placeController = new TextEditingController();
 
   List<DropdownMenuItem<String>> _dropDownDayItems,
@@ -1000,8 +1149,8 @@ class ExplorePageState extends State<ExplorePage> {
                 child: new ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (BuildContext context, int index) =>
-                      HomeSearchCard(),
-                  itemCount: 6,
+                      HomeSearchCard(searchImages[index]),
+                  itemCount: searchImages.length,
                 ),
               ),
               Container(
@@ -1046,25 +1195,10 @@ class ExplorePageState extends State<ExplorePage> {
                 child: new ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (BuildContext context, int index) =>
-                      HomePopularCard(),
-                  itemCount: 5,
+                      HomePopularCard(popularPlaces[index]),
+                  itemCount: popularPlaces.length,
                 ),
               ),
-              // Container(
-              //   width: 60,
-              //   margin: EdgeInsets.only(top: 20),
-              //   decoration: BoxDecoration(
-              //       borderRadius: BorderRadius.all(Radius.circular(15.0)),
-              //       color: Colors.white,
-              //       boxShadow: [
-              //         BoxShadow(
-              //           blurRadius: 3.0,
-              //           color: header,
-              //           //offset: Offset(6.0, 7.0),
-              //         ),
-              //       ],
-              //       border: Border.all(width: 0.5, color: header)),
-              // ),
               Container(
                   alignment: Alignment.centerLeft,
                   margin: EdgeInsets.only(top: 20, left: 20, right: 20),
@@ -1085,14 +1219,7 @@ class ExplorePageState extends State<ExplorePage> {
                               context,
                               MaterialPageRoute(
                                   builder: (context) => HotelSearchPage(
-                                      "",
-                                      "",
-                                      "",
-                                      "",
-                                      "",
-                                      0,
-                                      0,
-                                      0)));
+                                      "", "", "", "", "", 0, 0, 0)));
                         },
                         child: Container(
                           child: Text(
@@ -1111,16 +1238,21 @@ class ExplorePageState extends State<ExplorePage> {
               Container(
                 margin: EdgeInsets.only(top: 15),
                 width: MediaQuery.of(context).size.width,
-                height: 230,
+                //height: 230,
                 child: Container(
-                  child: MediaQuery.removePadding(
-                    context: context,
-                    removeTop: true,
-                    child: new ListView.builder(
-                      itemBuilder: (BuildContext context, int index) =>
-                          HomeBestDealsCard(),
-                      itemCount: 2,
-                    ),
+                  // child: MediaQuery.removePadding(
+                  //   context: context,
+                  //   removeTop: true,
+                  //   child: new ListView.builder(
+                  //     itemBuilder: (BuildContext context, int index) =>
+                  //         HomeBestDealsCard(),
+                  //     itemCount: 2,
+                  //   ),
+                  // ),
+                  child: Column(
+                    children: List.generate(bestDeals.length, (index) {
+                      return HomeBestDealsCard(bestDeals[index]);
+                    }),
                   ),
                 ),
               ),

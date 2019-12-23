@@ -4,6 +4,9 @@ import 'package:roome/MainScreens/HotelDetails/hotelDetails.dart';
 import '../../main.dart';
 
 class FavTripCard extends StatefulWidget {
+  final favList;
+
+  FavTripCard(this.favList);
   @override
   _FavTripCardState createState() => _FavTripCardState();
 }
@@ -39,7 +42,7 @@ class _FavTripCardState extends State<FavTripCard> {
                 width: 100,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/images/h4.jpg"),
+                    image: AssetImage("${widget.favList['image']}"),
                     fit: BoxFit.cover,
                   ),
                   borderRadius: BorderRadius.only(
@@ -76,7 +79,7 @@ class _FavTripCardState extends State<FavTripCard> {
                                 margin:
                                     EdgeInsets.only(top: 5, left: 0, bottom: 0),
                                 child: Text(
-                                  "Queens Hotel",
+                                  "${widget.favList['name']}",
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
@@ -104,7 +107,7 @@ class _FavTripCardState extends State<FavTripCard> {
                                       child: Row(
                                         children: <Widget>[
                                           Text(
-                                            "Leistershire, England",
+                                            "${widget.favList['place']}",
                                             textAlign: TextAlign.start,
                                             style: TextStyle(
                                                 color: Colors.grey,
@@ -122,7 +125,7 @@ class _FavTripCardState extends State<FavTripCard> {
                                           Icon(Icons.attach_money,
                                               color: Colors.black87, size: 14),
                                           Text(
-                                            "220",
+                                            "${widget.favList['price']}",
                                             textAlign: TextAlign.start,
                                             style: TextStyle(
                                                 color: Colors.black87,

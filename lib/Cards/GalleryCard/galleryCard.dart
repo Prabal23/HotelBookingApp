@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class GalleryCard extends StatefulWidget {
+  final images;
+
+  GalleryCard(this.images);
   @override
   _GalleryCardState createState() => _GalleryCardState();
 }
@@ -27,7 +30,7 @@ class _GalleryCardState extends State<GalleryCard> {
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
                         image: DecorationImage(
-                          image: AssetImage("assets/images/h1.jpg"),
+                          image: AssetImage("${widget.images}"),
                           fit: BoxFit.cover,
                         ),
                         borderRadius: BorderRadius.only(
